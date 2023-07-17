@@ -1,0 +1,338 @@
+INFO - 2023-05-30 05:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 05:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 05:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 05:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:15:28 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(92): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('Q7A8jCu9 DkwvurPP5')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('7c10c01d4821fad42260bb12019bd5868879532a19533cb07fce9cbcQ7A8jCu9 DkwvurPP5')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('7c10c01d4821fad42260bb12019bd5868879532a19533cb07fce9cbcQ7A8jCu9 DkwvurPP5', 'jMvi4')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 14:16:39 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(92): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('Q7A8jCu9 DkwvurPP5')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('7c10c01d4821fad42260bb12019bd5868879532a19533cb07fce9cbcQ7A8jCu9 DkwvurPP5')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('7c10c01d4821fad42260bb12019bd5868879532a19533cb07fce9cbcQ7A8jCu9 DkwvurPP5', 'jMvi4')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:21:51 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('BCj6ct IE9JGb')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('5b82e74692c1ef27b07b9bfd098fa4f7a7a38c18cb384f6d04eff0daBCj6ct IE9JGb')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('5b82e74692c1ef27b07b9bfd098fa4f7a7a38c18cb384f6d04eff0daBCj6ct IE9JGb', 'YWV5Evn6WP')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-30 14:22:29 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('BCj6ct IE9JGb')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('5b82e74692c1ef27b07b9bfd098fa4f7a7a38c18cb384f6d04eff0daBCj6ct IE9JGb')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('5b82e74692c1ef27b07b9bfd098fa4f7a7a38c18cb384f6d04eff0daBCj6ct IE9JGb', 'YWV5Evn6WP')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:23:47 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('RkASkLJNy57BmVMTFDQ PMSD')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('3cde68a7dc653f2f983366e67d3438435243631ddee6ddc2175ade77RkASkLJNy57BmVMTFDQ PMSD')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('3cde68a7dc653f2f983366e67d3438435243631ddee6ddc2175ade77RkASkLJNy57BmVMTFDQ PMSD')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:28:13 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('137ZwVKnGh37u DkdaRNVmCK')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('b9c2ba5b19e52a6a5220d3a28dbd0eea71d3876b6ddc9cba8e9d5d33137ZwVKnGh37u DkdaRNVmCK')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('b9c2ba5b19e52a6a5220d3a28dbd0eea71d3876b6ddc9cba8e9d5d33137ZwVKnGh37u DkdaRNVmCK')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:33:46 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('DZzOV0Fki6Qwh')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('2041b7c16334eba98208eeb88f575e6327736dbcc7926ef471d962c4DZzOV0Fki6Qwh')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('2041b7c16334eba98208eeb88f575e6327736dbcc7926ef471d962c4DZzOV0Fki6Qwh', 'kdrATYZTIk')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:34:35 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(91): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('3KO3A')
+ 3 APPPATH/Controllers/User_controller.php(68): App\Models\User_model->updateUser('8263508a3cf9af4e76a895b2b79e22e60942e83c9bd479967124fb953KO3A')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->updateUser('8263508a3cf9af4e76a895b2b79e22e60942e83c9bd479967124fb953KO3A', 'Xv0QXvts', 'Pjg3F', '3qZ')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 14:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 14:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:50:03 --> Undefined index: page1
+in APPPATH/Views/users/usermanagement.php on line 28.
+ 1 APPPATH/Views/users/usermanagement.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: page1', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 28, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement('add')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 06:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:54:47 --> Undefined index: page1
+in APPPATH/Views/users/usermanagement.php on line 28.
+ 1 APPPATH/Views/users/usermanagement.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: page1', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 28, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement('add')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 06:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:55:28 --> Undefined index: page1
+in APPPATH/Views/users/usermanagement.php on line 28.
+ 1 APPPATH/Views/users/usermanagement.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: page1', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 28, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 06:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:55:36 --> Undefined index: page1
+in APPPATH/Views/users/usermanagement.php on line 28.
+ 1 APPPATH/Views/users/usermanagement.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: page1', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 28, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 06:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 14:55:37 --> Undefined index: page1
+in APPPATH/Views/users/usermanagement.php on line 28.
+ 1 APPPATH/Views/users/usermanagement.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: page1', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 28, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 06:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 06:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-30 15:45:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and tu.status = 'inactive'' at line 6 in /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php(295): mysqli->query('select tu.user_...', 0)
+#1 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tu.user_...')
+#2 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tu.user_...')
+#3 /Applications/MAMP/htdocs/adminfhm/app/Models/User_model.php(61): CodeIgniter\Database\BaseConnection->query('select tu.user_...')
+#4 /Applications/MAMP/htdocs/adminfhm/app/Controllers/User_controller.php(26): App\Models\User_model->viewaInactiveUser()
+#5 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+#6 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+#7 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/adminfhm/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-30 15:45:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and tu.status = 'inactive'' at line 6
+in SYSTEMPATH/Database/mysqli/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(295): mysqli->query('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete !=
+        and tu.status = \'inactive\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete !=
+        and tu.status = \'inactive\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete !=
+        and tu.status = \'inactive\'')
+ 4 APPPATH/Models/User_model.php(61): CodeIgniter\Database\BaseConnection->query('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete !=
+        and tu.status = \'inactive\'')
+ 5 APPPATH/Controllers/User_controller.php(26): App\Models\User_model->viewaInactiveUser()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-30 15:46:29 --> mysqli_sql_exception: Unknown column 'isdelete' in 'where clause' in /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php(295): mysqli->query('select tu.user_...', 0)
+#1 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tu.user_...')
+#2 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tu.user_...')
+#3 /Applications/MAMP/htdocs/adminfhm/app/Models/User_model.php(52): CodeIgniter\Database\BaseConnection->query('select tu.user_...')
+#4 /Applications/MAMP/htdocs/adminfhm/app/Controllers/User_controller.php(25): App\Models\User_model->viewaActiveUser()
+#5 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+#6 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+#7 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/adminfhm/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-30 15:46:29 --> Unknown column 'isdelete' in 'where clause'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(295): mysqli->query('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete != 1
+        and tu.status = \'active\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete != 1
+        and tu.status = \'active\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete != 1
+        and tu.status = \'active\'')
+ 4 APPPATH/Models/User_model.php(52): CodeIgniter\Database\BaseConnection->query('select tu.user_id, tu.user_group_id, tu.username, tu.name as nameuser, tu.status as tustatus, tug.name as groupname, tu.added_by as added
+        from tbl_user as tu, tbl_user_group as tug
+        where tu.user_group_id = tug.user_group_id
+        and user_id != 2
+        and isdelete != 1
+        and tu.status = \'active\'')
+ 5 APPPATH/Controllers/User_controller.php(25): App\Models\User_model->viewaActiveUser()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 15:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-30 15:48:01 --> mysqli_sql_exception: Unknown column 'isdelete' in 'field list' in /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/adminfhm/system/Database/mysqli/Connection.php(295): mysqli->query('UPDATE `tbl_use...', 0)
+#1 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_use...')
+#2 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_use...')
+#3 /Applications/MAMP/htdocs/adminfhm/system/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_use...', Array, false)
+#4 /Applications/MAMP/htdocs/adminfhm/app/Models/User_model.php(145): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/adminfhm/app/Controllers/User_controller.php(82): App\Models\User_model->deleteUser('ef2109fedc4ef2a...')
+#6 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(934): App\Controllers\User_controller->deleteUser('ef2109fedc4ef2a...')
+#7 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+#8 /Applications/MAMP/htdocs/adminfhm/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/adminfhm/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-30 15:48:01 --> Unknown column 'isdelete' in 'field list'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(295): mysqli->query('UPDATE `tbl_user` SET `isdelete` = 1
+WHERE `user_id` = \'24\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_user` SET `isdelete` = 1
+WHERE `user_id` = \'24\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_user` SET `isdelete` = 1
+WHERE `user_id` = \'24\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_user` SET `isdelete` = :isdelete:
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH/Models/User_model.php(145): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH/Controllers/User_controller.php(82): App\Models\User_model->deleteUser('ef2109fedc4ef2a1a89fc50533fa6c0035ef713dc067379508cf3813Ac92QNcwAjAqigDIrpBPr0kc')
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->deleteUser('ef2109fedc4ef2a1a89fc50533fa6c0035ef713dc067379508cf3813Ac92QNcwAjAqigDIrpBPr0kc')
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 15:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 15:49:13 --> Decrypting: authentication failed.
+in SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH/Encryption/Handlers/OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH/Models/User_model.php(136): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('Vna36GD eqLEUrvUETPE1xc2')
+ 3 APPPATH/Controllers/User_controller.php(82): App\Models\User_model->deleteUser('2f0733d4f776b52ec42f5cb605c796031ff386e706d4a1859c074e34Vna36GD eqLEUrvUETPE1xc2')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->deleteUser('2f0733d4f776b52ec42f5cb605c796031ff386e706d4a1859c074e34Vna36GD eqLEUrvUETPE1xc2')
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 15:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 15:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 16:02:44 --> Undefined index: Level
+in APPPATH/Views/users/usermanagement.php on line 528.
+ 1 APPPATH/Views/users/usermanagement.php(528): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Level', '/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php', 528, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('/Applications/MAMP/htdocs/adminfhm/app/Views/users/usermanagement.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 5 APPPATH/Controllers/User_controller.php(33): view('users/usermanagement', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 16:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-30 16:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-30 16:35:30 --> syntax error, unexpected end of file
+in APPPATH/Views/users/usermanagement.php on line 668.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 3 APPPATH/Controllers/User_controller.php(37): view('users/usermanagement', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-30 16:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

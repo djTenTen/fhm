@@ -1,0 +1,9 @@
+INFO - 2023-07-12 11:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-12 11:23:07 --> Undefined array key "sessionID"
+in APPPATH\Models\Login_model.php on line 158.
+ 1 APPPATH\Models\Login_model.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sessionID"', 'C:\\Users\\Furniture House\\Dropbox\\01.Projects\\htdocs\\new\\admin.furniturehousemanila.com\\app\\Models\\Login_model.php', 158)
+ 2 APPPATH\Controllers\Login_controller.php(119): App\Models\Login_model->checkAuthentication()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login_controller->checkAuthentication()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,714 @@
+INFO - 2023-06-05 00:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 00:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 00:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 00:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 00:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:16:32 --> Undefined array key "tustatus"
+in APPPATH\Views\supplier\supplier.php on line 60.
+ 1 APPPATH\Views\supplier\supplier.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tustatus"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('supplier/supplier', [], true)
+ 5 APPPATH\Controllers\Supplier_controller.php(50): view('supplier/supplier', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Supplier_controller->supplier()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:34:03 --> Undefined variable $ias
+in APPPATH\Views\supplier\supplier.php on line 56.
+ 1 APPPATH\Views\supplier\supplier.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ias', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('supplier/supplier', [], true)
+ 5 APPPATH\Controllers\Supplier_controller.php(50): view('supplier/supplier', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Supplier_controller->supplier()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:34:13 --> Undefined variable $added
+in APPPATH\Views\supplier\supplier.php on line 63.
+ 1 APPPATH\Views\supplier\supplier.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $added', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\supplier\\supplier.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('supplier/supplier', [], true)
+ 5 APPPATH\Controllers\Supplier_controller.php(50): view('supplier/supplier', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Supplier_controller->supplier()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:40:15 --> Class "App\Models\Costumer_model" not found
+in APPPATH\Controllers\Costumer_controller.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Costumer_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:41:02 --> Undefined variable $activesupp
+in APPPATH\Views\costumer\costumers.php on line 54.
+ 1 APPPATH\Views\costumer\costumers.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activesupp', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(50): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:55:04 --> syntax error, unexpected token "return"
+in APPPATH\Models\Costumer_model.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Costumer_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Costumer_model')
+ 3 APPPATH\Controllers\Costumer_controller.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Costumer_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Costumer_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:59:08 --> syntax error, unexpected token "return"
+in APPPATH\Models\Costumer_model.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Costumer_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Costumer_model')
+ 3 APPPATH\Controllers\Costumer_controller.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Costumer_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Costumer_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:59:09 --> syntax error, unexpected token "return"
+in APPPATH\Models\Costumer_model.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Costumer_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Costumer_model')
+ 3 APPPATH\Controllers\Costumer_controller.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Costumer_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Costumer_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-05 10:03:27 --> mysqli_sql_exception: Table 'db_furniturehouse.tbl_costumer' doesn't exist in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from t...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from t...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from t...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Costumer_model.php(46): CodeIgniter\Database\BaseConnection->query('select * from t...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Costumer_controller.php(43): App\Models\Costumer_model->getActiveCostumers()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-05 10:03:27 --> Table 'db_furniturehouse.tbl_costumer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from tbl_costumer where status=\'active\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from tbl_costumer where status=\'active\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from tbl_costumer where status=\'active\'')
+ 4 APPPATH\Models\Costumer_model.php(46): CodeIgniter\Database\BaseConnection->query('select * from tbl_costumer where status=\'active\'')
+ 5 APPPATH\Controllers\Costumer_controller.php(43): App\Models\Costumer_model->getActiveCostumers()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:05:05 --> Undefined array key "costumer_id"
+in APPPATH\Views\costumer\costumers.php on line 56.
+ 1 APPPATH\Views\costumer\costumers.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "costumer_id"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(51): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:05:32 --> Undefined variable $as
+in APPPATH\Views\costumer\costumers.php on line 63.
+ 1 APPPATH\Views\costumer\costumers.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $as', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(51): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-05 10:08:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'here status='active' 
+        and type = 'personal'' at line 3 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select * \r\n    ...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * \r\n    ...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * \r\n    ...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Costumer_model.php(46): CodeIgniter\Database\BaseConnection->query('select * \r\n    ...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Costumer_controller.php(43): App\Models\Costumer_model->getActiveCostumers()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-05 10:08:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'here status='active' 
+        and type = 'personal'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * 
+        from tbl_customer 
+        w   here status=\'active\' 
+        and type = \'personal\' ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * 
+        from tbl_customer 
+        w   here status=\'active\' 
+        and type = \'personal\' ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * 
+        from tbl_customer 
+        w   here status=\'active\' 
+        and type = \'personal\' ')
+ 4 APPPATH\Models\Costumer_model.php(46): CodeIgniter\Database\BaseConnection->query('select * 
+        from tbl_customer 
+        w   here status=\'active\' 
+        and type = \'personal\' ')
+ 5 APPPATH\Controllers\Costumer_controller.php(43): App\Models\Costumer_model->getActiveCostumers()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:43:37 --> Trying to access array offset on value of type null
+in APPPATH\Views\costumer\costumers.php on line 67.
+ 1 APPPATH\Views\costumer\costumers.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:45:36 --> Trying to access array offset on value of type null
+in APPPATH\Views\costumer\costumers.php on line 67.
+ 1 APPPATH\Views\costumer\costumers.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:46:13 --> Trying to access array offset on value of type null
+in APPPATH\Views\costumer\costumers.php on line 67.
+ 1 APPPATH\Views\costumer\costumers.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:46:40 --> Trying to access array offset on value of type null
+in APPPATH\Views\costumer\costumers.php on line 67.
+ 1 APPPATH\Views\costumer\costumers.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:49:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\costumer\costumers.php on line 67.
+ 1 APPPATH\Views\costumer\costumers.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:50:27 --> Undefined variable $acorporate
+in APPPATH\Views\costumer\costumers.php on line 201.
+ 1 APPPATH\Views\costumer\costumers.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $acorporate', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 201)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:52:41 --> Cannot access offset of type string on string
+in APPPATH\Views\users\usermanagement.php on line 418.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/usermanagement', [], true)
+ 4 APPPATH\Controllers\User_controller.php(55): view('users/usermanagement', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User_controller->usermanagement()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:55:53 --> Undefined variable $ias
+in APPPATH\Views\costumer\costumers.php on line 140.
+ 1 APPPATH\Views\costumer\costumers.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ias', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 140)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 03:15:24 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Models\Costumer_model.php on line 86.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Costumer_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Costumer_model')
+ 3 APPPATH\Controllers\Costumer_controller.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Costumer_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Costumer_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 03:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 11:32:22 --> Undefined array key "website"
+in APPPATH\Views\costumer\costumers.php on line 419.
+ 1 APPPATH\Views\costumer\costumers.php(419): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "website"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 419)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 03:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 11:32:23 --> Undefined array key "website"
+in APPPATH\Views\costumer\costumers.php on line 419.
+ 1 APPPATH\Views\costumer\costumers.php(419): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "website"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 419)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 03:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 11:33:43 --> Undefined array key "facevook"
+in APPPATH\Views\costumer\costumers.php on line 428.
+ 1 APPPATH\Views\costumer\costumers.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "facevook"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\costumers.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/costumers', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(53): view('costumer/costumers', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->costumers()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 03:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 03:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 12:01:09 --> password_hash() expects at least 2 arguments, 1 given
+in APPPATH\Models\Costumer_model.php on line 133.
+ 1 APPPATH\Models\Costumer_model.php(133): password_hash(Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Costumer_controller.php(80): App\Models\Costumer_model->updateCorporate('30441eae815da367b2bc521dfc9f092a4b1d13712c8eb486895e9efdVs0wHgdZF4y7bEN90rpFQ4I=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->updateCorporate('30441eae815da367b2bc521dfc9f092a4b1d13712c8eb486895e9efdVs0wHgdZF4y7bEN90rpFQ4I=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 04:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 04:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 13:23:52 --> Undefined variable $siteurl
+in APPPATH\Views\costumer\addcustomer.php on line 180.
+ 1 APPPATH\Views\costumer\addcustomer.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $siteurl', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\addcustomer.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\costumer\\addcustomer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('costumer/addcustomer', [], true)
+ 5 APPPATH\Controllers\Costumer_controller.php(77): view('costumer/addcustomer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Costumer_controller->addCustomer()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Costumer_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 05:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 05:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:38:52 --> Undefined variable $acostumer
+in APPPATH\Views\warehouse\warehouse.php on line 67.
+ 1 APPPATH\Views\warehouse\warehouse.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $acostumer', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(51): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:44:57 --> Undefined property: App\Controllers\Warehouse_controller::$user_model
+in APPPATH\Controllers\Warehouse_controller.php on line 44.
+ 1 APPPATH\Controllers\Warehouse_controller.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Warehouse_controller::$user_model', 'C:\\xampp\\htdocs\\adminfhm\\app\\Controllers\\Warehouse_controller.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:45:16 --> Undefined property: App\Controllers\Warehouse_controller::$user_model
+in APPPATH\Controllers\Warehouse_controller.php on line 44.
+ 1 APPPATH\Controllers\Warehouse_controller.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Warehouse_controller::$user_model', 'C:\\xampp\\htdocs\\adminfhm\\app\\Controllers\\Warehouse_controller.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-05 14:45:44 --> mysqli_sql_exception: Unknown column 'active' in 'where clause' in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from t...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from t...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from t...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Warehouse_model.php(45): CodeIgniter\Database\BaseConnection->query('select * from t...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Warehouse_controller.php(44): App\Models\Warehouse_model->getActiveWarehouse()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-05 14:45:44 --> Unknown column 'active' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from tbl_warehouse where status = active', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from tbl_warehouse where status = active')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from tbl_warehouse where status = active')
+ 4 APPPATH\Models\Warehouse_model.php(45): CodeIgniter\Database\BaseConnection->query('select * from tbl_warehouse where status = active')
+ 5 APPPATH\Controllers\Warehouse_controller.php(44): App\Models\Warehouse_model->getActiveWarehouse()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:46:08 --> Undefined variable $ac
+in APPPATH\Views\warehouse\warehouse.php on line 67.
+ 1 APPPATH\Views\warehouse\warehouse.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ac', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:46:42 --> Undefined variable $ac
+in APPPATH\Views\warehouse\warehouse.php on line 69.
+ 1 APPPATH\Views\warehouse\warehouse.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ac', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:47:15 --> Undefined array key "customer_id"
+in APPPATH\Views\warehouse\warehouse.php on line 77.
+ 1 APPPATH\Views\warehouse\warehouse.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "customer_id"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 06:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:57:01 --> Undefined variable $ias
+in APPPATH\Views\warehouse\warehouse.php on line 138.
+ 1 APPPATH\Views\warehouse\warehouse.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ias', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:57:16 --> Undefined variable $ias
+in APPPATH\Views\warehouse\warehouse.php on line 138.
+ 1 APPPATH\Views\warehouse\warehouse.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ias', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 14:57:43 --> Undefined variable $ias
+in APPPATH\Views\warehouse\warehouse.php on line 138.
+ 1 APPPATH\Views\warehouse\warehouse.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ias', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 06:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:12:59 --> Undefined variable $date
+in APPPATH\Models\Warehouse_model.php on line 53.
+ 1 APPPATH\Models\Warehouse_model.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $date', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Warehouse_model.php', 53)
+ 2 APPPATH\Controllers\Warehouse_controller.php(64): App\Models\Warehouse_model->updatesWarehouse('2835dae0be749566b0c6f51a74ad60dcd0fae1bf97b3c08b6f2816f7KYcKEk29cbKeiVCoTdy67$o=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->updatesWarehouse('2835dae0be749566b0c6f51a74ad60dcd0fae1bf97b3c08b6f2816f7KYcKEk29cbKeiVCoTdy67$o=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:13:28 --> Undefined variable $time
+in APPPATH\Models\Warehouse_model.php on line 53.
+ 1 APPPATH\Models\Warehouse_model.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $time', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Warehouse_model.php', 53)
+ 2 APPPATH\Controllers\Warehouse_controller.php(64): App\Models\Warehouse_model->updatesWarehouse('2835dae0be749566b0c6f51a74ad60dcd0fae1bf97b3c08b6f2816f7KYcKEk29cbKeiVCoTdy67$o=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->updatesWarehouse('2835dae0be749566b0c6f51a74ad60dcd0fae1bf97b3c08b6f2816f7KYcKEk29cbKeiVCoTdy67$o=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:13:56 --> Undefined variable $time
+in APPPATH\Models\Warehouse_model.php on line 53.
+ 1 APPPATH\Models\Warehouse_model.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $time', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Warehouse_model.php', 53)
+ 2 APPPATH\Controllers\Warehouse_controller.php(64): App\Models\Warehouse_model->updatesWarehouse('e45d5fa1c124839e656eaa4952ac33283539a8a66d2cb438e429bf78Wj22o6kLo1w7dPYV~Q$x2ag=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->updatesWarehouse('e45d5fa1c124839e656eaa4952ac33283539a8a66d2cb438e429bf78Wj22o6kLo1w7dPYV~Q$x2ag=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:39:08 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Warehouse_controller.php(96): CodeIgniter\Model->__call('registerWarehouse', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->registerWarehouse()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:41:10 --> Trying to access array offset on value of type null
+in APPPATH\Views\warehouse\warehouse.php on line 62.
+ 1 APPPATH\Views\warehouse\warehouse.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:41:30 --> Trying to access array offset on value of type null
+in APPPATH\Views\warehouse\warehouse.php on line 62.
+ 1 APPPATH\Views\warehouse\warehouse.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 15:41:57 --> Trying to access array offset on value of type null
+in APPPATH\Views\warehouse\warehouse.php on line 62.
+ 1 APPPATH\Views\warehouse\warehouse.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\warehouse\\warehouse.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('warehouse/warehouse', [], true)
+ 5 APPPATH\Controllers\Warehouse_controller.php(48): view('warehouse/warehouse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Warehouse_controller->warehouse()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Warehouse_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 07:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 07:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

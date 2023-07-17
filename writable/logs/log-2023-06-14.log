@@ -1,0 +1,1116 @@
+INFO - 2023-06-14 01:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 01:28:57 --> Cannot redeclare App\Models\Inventory_model::$tblsi
+in APPPATH\Models\Inventory_model.php on line 26.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-14 01:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 01:51:15 --> syntax error, unexpected variable "$this"
+in APPPATH\Models\Sales_model.php on line 192.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Sales_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Sales_model')
+ 3 APPPATH\Controllers\Sales_controller.php(29): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Sales_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Sales_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 01:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 09:51:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ifnull ((select count(customer_id)
+            from tbl_reservation as tblr)...' at line 17 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select ifnull (...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ifnull (...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ifnull (...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(192): CodeIgniter\Database\BaseConnection->query('select ifnull (...')
+#4 C:\xampp\htdocs\adminfhm\app\Views\includes\header.php(197): App\Models\Sales_model->countReservation()
+#5 C:\xampp\htdocs\adminfhm\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\adminfhm\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\adminfhm\system\Common.php(1184): CodeIgniter\View\View->render('includes/header', Array, true)
+#8 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(49): view('includes/header', Array)
+#9 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->addReservation()
+#10 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#11 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-14 09:51:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ifnull ((select count(customer_id)
+            from tbl_reservation as tblr)...' at line 17
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 4 APPPATH\Models\Sales_model.php(192): CodeIgniter\Database\BaseConnection->query('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 5 APPPATH\Views\includes\header.php(197): App\Models\Sales_model->countReservation()
+ 6 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\includes\\header.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('includes/header', [], true)
+ 9 APPPATH\Controllers\Sales_controller.php(49): view('includes/header', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->addReservation()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 01:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 09:52:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'all' at line 18 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select ifnull (...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ifnull (...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ifnull (...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(192): CodeIgniter\Database\BaseConnection->query('select ifnull (...')
+#4 C:\xampp\htdocs\adminfhm\app\Views\includes\header.php(197): App\Models\Sales_model->countReservation()
+#5 C:\xampp\htdocs\adminfhm\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\adminfhm\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\adminfhm\system\Common.php(1184): CodeIgniter\View\View->render('includes/header', Array, true)
+#8 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(49): view('includes/header', Array)
+#9 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->addReservation()
+#10 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#11 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-14 09:52:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'all' at line 18
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 4 APPPATH\Models\Sales_model.php(192): CodeIgniter\Database\BaseConnection->query('select ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'open\'), 0) as open,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'ready\'), 0) as ready,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'completed\'), 0) as completed,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr
+            where tblr.status = \'cancelled\'), 0) as cancelled,
+
+            ifnull ((select count(customer_id)
+            from tbl_reservation as tblr), 0) as all
+
+        ')
+ 5 APPPATH\Views\includes\header.php(197): App\Models\Sales_model->countReservation()
+ 6 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\includes\\header.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('includes/header', [], true)
+ 9 APPPATH\Controllers\Sales_controller.php(49): view('includes/header', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->addReservation()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 01:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 09:52:49 --> Undefined array key "all"
+in APPPATH\Views\includes\header.php on line 198.
+ 1 APPPATH\Views\includes\header.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "all"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\includes\\header.php', 198)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\includes\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('includes/header', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(49): view('includes/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->addReservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 01:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 01:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 10:28:51 --> mysqli_sql_exception: Column 'added_on' in field list is ambiguous in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select reservat...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservat...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservat...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(220): CodeIgniter\Database\BaseConnection->query('select reservat...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 10:28:51 --> Column 'added_on' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 4 APPPATH\Models\Sales_model.php(220): CodeIgniter\Database\BaseConnection->query('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 5 APPPATH\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 02:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 10:29:06 --> mysqli_sql_exception: Unknown column 'open' in 'where clause' in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select reservat...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservat...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservat...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(220): CodeIgniter\Database\BaseConnection->query('select reservat...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 10:29:06 --> Unknown column 'open' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 4 APPPATH\Models\Sales_model.php(220): CodeIgniter\Database\BaseConnection->query('select reservation_id,tc.name as customer,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu
+        where tr.status = open')
+ 5 APPPATH\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 02:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 10:29:17 --> Undefined array key "delibery_fee"
+in APPPATH\Views\sales\reservation.php on line 53.
+ 1 APPPATH\Views\sales\reservation.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "delibery_fee"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\reservation.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\reservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/reservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(50): view('sales/reservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 02:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 02:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 11:29:17 --> mysqli_sql_exception: Unknown column 'tr.contact' in 'field list' in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select reservat...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservat...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservat...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(222): CodeIgniter\Database\BaseConnection->query('select reservat...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 11:29:17 --> Unknown column 'tr.contact' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select reservation_id,tc.name as customer,tr.address,tr.contact,remark,twh.name as warehouse,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.status = \'open\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select reservation_id,tc.name as customer,tr.address,tr.contact,remark,twh.name as warehouse,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.status = \'open\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select reservation_id,tc.name as customer,tr.address,tr.contact,remark,twh.name as warehouse,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.status = \'open\'')
+ 4 APPPATH\Models\Sales_model.php(222): CodeIgniter\Database\BaseConnection->query('select reservation_id,tc.name as customer,tr.address,tr.contact,remark,twh.name as warehouse,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.status = \'open\'')
+ 5 APPPATH\Controllers\Sales_controller.php(47): App\Models\Sales_model->getOpenReservation()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 03:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 11:30:12 --> Undefined variable $encrypter
+in APPPATH\Views\sales\reservation.php on line 63.
+ 1 APPPATH\Views\sales\reservation.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $encrypter', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\reservation.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\reservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/reservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(50): view('sales/reservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 03:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 11:30:36 --> mysqli_sql_exception: Unknown column 'ti._item_id' in 'where clause' in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select ti.name,...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ti.name,...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ti.name,...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(233): CodeIgniter\Database\BaseConnection->query('select ti.name,...')
+#4 C:\xampp\htdocs\adminfhm\app\Views\sales\reservation.php(139): App\Models\Sales_model->getReserveItem('6')
+#5 C:\xampp\htdocs\adminfhm\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\adminfhm\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\adminfhm\system\Common.php(1184): CodeIgniter\View\View->render('sales/reservati...', Array, true)
+#8 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(50): view('sales/reservati...', Array)
+#9 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+#10 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#11 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-06-14 11:30:36 --> Unknown column 'ti._item_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti._item_id
+        and tri.reservation_id = 6', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti._item_id
+        and tri.reservation_id = 6')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti._item_id
+        and tri.reservation_id = 6')
+ 4 APPPATH\Models\Sales_model.php(233): CodeIgniter\Database\BaseConnection->query('select ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti._item_id
+        and tri.reservation_id = 6')
+ 5 APPPATH\Views\sales\reservation.php(139): App\Models\Sales_model->getReserveItem('6')
+ 6 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\reservation.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/reservation', [], true)
+ 9 APPPATH\Controllers\Sales_controller.php(50): view('sales/reservation', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 03:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 03:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 13:57:18 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Views\sales\reservation.php on line 72.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/reservation', [], true)
+ 3 APPPATH\Controllers\Sales_controller.php(53): view('sales/reservation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->reservation()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 05:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 05:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:16:02 --> Undefined array key "delivery_date"
+in APPPATH\Views\sales\editreservation.php on line 62.
+ 1 APPPATH\Views\sales\editreservation.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "delivery_date"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(105): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('71bc1d0b0451b69183e2e47d75dead716bcf34c820a093f1b52afbf2hk0dOmZ3voaRdvSKwLQ4BUc=', 'd139920dc472e4ae03816316a20941cf45f760d589f9fb8c57471f755w5ubeZLuO32fx50c2lbB6A=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:18:03 --> Undefined array key "delivery_date"
+in APPPATH\Views\sales\editreservation.php on line 62.
+ 1 APPPATH\Views\sales\editreservation.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "delivery_date"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(105): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('998763ee6d58e3be63ee577b871bdceee37bd2173bfef18632db3b90fJ6ID~O~we5DOn36eLafpDE=', 'c2e41104c41a049ec1af093d5b6403e364fde4b89eaffe3403847d9778ZzleuMgCoU2nsyl7G1ytA=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:21:21 --> explode() expects at least 2 arguments, 1 given
+in APPPATH\Views\sales\editreservation.php on line 62.
+ 1 APPPATH\Views\sales\editreservation.php(62): explode('/')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(105): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('4e3946d6c5802c5f0181806fb48d610559c3bd404fa03d84983f8aa6gHy2QFD7C5sr0DoHXCak1t8=', 'a0625650e1d65eb965d129494a11905663e2766afb2c06a449c58bf4$4w$JSKYM9bsV5WyyI9LXN0=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:22:19 --> explode() expects at least 2 arguments, 1 given
+in APPPATH\Views\sales\editreservation.php on line 62.
+ 1 APPPATH\Views\sales\editreservation.php(62): explode('/')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(105): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('e471ca949c2a09795e0db259eadfdc355a298391ba1f79415d7c5855~$AdE984YkyY8RKx7uEb$wY=', 'e96868f8382cb6460c462e2c0416b3b7e4107499f4b0817e0a23bd33Z$YXxpLXMhVQ~VOPyAvxzx4=', '730b72e2db73903062d619316c48e48b7acae046e7c5a841fe23e7d0QRW8BobqXX2y90zw$Ij5PHwQPpUzeLE46XM=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:26:16 --> explode() expects at least 2 arguments, 1 given
+in APPPATH\Views\sales\editreservation.php on line 80.
+ 1 APPPATH\Views\sales\editreservation.php(80): explode('/')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(107): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('e471ca949c2a09795e0db259eadfdc355a298391ba1f79415d7c5855~$AdE984YkyY8RKx7uEb$wY=', 'e96868f8382cb6460c462e2c0416b3b7e4107499f4b0817e0a23bd33Z$YXxpLXMhVQ~VOPyAvxzx4=', '730b72e2db73903062d619316c48e48b7acae046e7c5a841fe23e7d0QRW8BobqXX2y90zw$Ij5PHwQPpUzeLE46XM=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:41:35 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::getRowtArray()
+in APPPATH\Models\Sales_model.php on line 213.
+ 1 APPPATH\Controllers\Sales_controller.php(105): App\Models\Sales_model->getReservation('250d3cb0e7ceafebca15cb0b2d03c2667ab50e5e605d933bcfd32200OLXDpr5F~UQmfQom~kPzPl8=')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('250d3cb0e7ceafebca15cb0b2d03c2667ab50e5e605d933bcfd32200OLXDpr5F~UQmfQom~kPzPl8=', 'eb3fcf544743ab9e1f7901f22390a1146211833fe65995ab1221da9cnbyZMHAAWOjXnpzdN7Kk340=')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:47:40 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(106): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('250d3cb0e7ceafebca15cb0b2d03c2667ab50e5e605d933bcfd32200OLXDpr5F~UQmfQom~kPzPl8=', 'eb3fcf544743ab9e1f7901f22390a1146211833fe65995ab1221da9cnbyZMHAAWOjXnpzdN7Kk340=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:47:54 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(106): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('55edfbb434ac619559a376a74b81a205cd6171fc3bc9210e8da98cbaXY0gX02lmluOsnP7g~MV7Qs=', '6f4ef13d81dc23d72df1adf7ef41c711b08236a719e115ca2c67373cuF7IgIKCQHCoxeXjSw7qKdw=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:50:47 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(106): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('15003803182eb9649bd4f83d86bd4340aeafc5b8f751cd4c90163b2asAZbuR5PILvpbdt~d5QG$E8=', 'f770a5adc02c1db32330a0cb4b42acc5396608662a4e3d4e16c92503LkvX9RVft3Csf0rRQSRvvZs=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:51:52 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\sales\editreservation.php on line 133.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 3 APPPATH\Controllers\Sales_controller.php(110): view('sales/editreservation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('6331222308386896bdd41171efad0d0fc6d9af2f7cb9f7a10c2412f9yiETelKFB2N4PQU7icUdOzo=', '196d83d6740d7119504a923805cfc8aa23a6af8fcdeb4d5cccda7e06CZcPX2~MzXftmWf$K0crPJ4=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 14:52:44 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\sales\editreservation.php on line 133.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 3 APPPATH\Controllers\Sales_controller.php(108): view('sales/editreservation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('6331222308386896bdd41171efad0d0fc6d9af2f7cb9f7a10c2412f9yiETelKFB2N4PQU7icUdOzo=', '196d83d6740d7119504a923805cfc8aa23a6af8fcdeb4d5cccda7e06CZcPX2~MzXftmWf$K0crPJ4=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 06:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 06:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 15:17:03 --> Call to undefined function App\Controllers\getReserveItem()
+in APPPATH\Controllers\Sales_controller.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('6331222308386896bdd41171efad0d0fc6d9af2f7cb9f7a10c2412f9yiETelKFB2N4PQU7icUdOzo=', '196d83d6740d7119504a923805cfc8aa23a6af8fcdeb4d5cccda7e06CZcPX2~MzXftmWf$K0crPJ4=')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 07:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:10:00 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(110): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('XgOBULwREM$ukX2XS1v9z74=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('cb66e9ddb95f90482b1863aaab631cdec766fc1c26b7defc11403c13XgOBULwREM$ukX2XS1v9z74=', '167bc3e0d27dd9b72029501f96ecb5a1f1f77ee97513369b27d3c0f22XhV4uILXWOxeE4At3hhYUY=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:10:13 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(110): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('iR~5sdwAojGTBGwAEoulzag=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('a0ca6f0ec2858485122f0e15eef64026d4e171f3a64e12fc5cae176aiR~5sdwAojGTBGwAEoulzag=', 'ca1bc8a8c366ed16f1fba22905187c2dd443b126bd9d83c454210f21OXsBeTDI5KaNRbdEbvUne9U=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:12:00 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(111): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('iR~5sdwAojGTBGwAEoulzag=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('a0ca6f0ec2858485122f0e15eef64026d4e171f3a64e12fc5cae176aiR~5sdwAojGTBGwAEoulzag=', 'ca1bc8a8c366ed16f1fba22905187c2dd443b126bd9d83c454210f21OXsBeTDI5KaNRbdEbvUne9U=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:12:04 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(111): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('DvpmWbpbKIt$s~iBGyJw8RU=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('886dd250fa6a7c5cd6a266663f9bc53231a8eab4b57e19c111e200f3DvpmWbpbKIt$s~iBGyJw8RU=', '6921d453fdf5b4ffc77e16c1934161653283fe19a77171b433809f03vY30vImVEd$9CU$i4WDUdEk=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:12:53 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(111): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('DvpmWbpbKIt$s~iBGyJw8RU=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('886dd250fa6a7c5cd6a266663f9bc53231a8eab4b57e19c111e200f3DvpmWbpbKIt$s~iBGyJw8RU=', '6921d453fdf5b4ffc77e16c1934161653283fe19a77171b433809f03vY30vImVEd$9CU$i4WDUdEk=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:15:30 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(111): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('f~xrMLZYXFK$HPVECVLJlFo=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:17:40 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\Sales_controller.php(112): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('f~xrMLZYXFK$HPVECVLJlFo=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:17:50 --> Undefined variable $item
+in APPPATH\Views\sales\editreservation.php on line 176.
+ 1 APPPATH\Views\sales\editreservation.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php', 176)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\sales\\editreservation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('sales/editreservation', [], true)
+ 5 APPPATH\Controllers\Sales_controller.php(115): view('sales/editreservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:19:02 --> Undefined variable $rid
+in APPPATH\Models\Sales_model.php on line 210.
+ 1 APPPATH\Models\Sales_model.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rid', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Sales_model.php', 210)
+ 2 APPPATH\Controllers\Sales_controller.php(108): App\Models\Sales_model->getReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 16:20:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=' at line 6 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tr.custo...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tr.custo...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tr.custo...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(206): CodeIgniter\Database\BaseConnection->query('select tr.custo...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(108): App\Models\Sales_model->getReservation('773e4ab2f458103...')
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f458103...', '1e89a2c28a9d78c...')
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 16:20:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tr.customer_id,reservation_id,tc.name as customer,tr.address,tr.contact_number,remark,twh.name as warehouse,tr.warehouse_id,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tr.customer_id,reservation_id,tc.name as customer,tr.address,tr.contact_number,remark,twh.name as warehouse,tr.warehouse_id,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tr.customer_id,reservation_id,tc.name as customer,tr.address,tr.contact_number,remark,twh.name as warehouse,tr.warehouse_id,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 4 APPPATH\Models\Sales_model.php(206): CodeIgniter\Database\BaseConnection->query('select tr.customer_id,reservation_id,tc.name as customer,tr.address,tr.contact_number,remark,twh.name as warehouse,tr.warehouse_id,delivery_method,delivery_date,delivery_fee,tr.status,tu.name as nameuser,tr.added_on 
+        from tbl_reservation as tr, tbl_customer as tc, tbl_user as tu, tbl_warehouse as twh
+        where tr.customer_id = tc.customer_id
+        and tr.warehouse_id = twh.warehouse_id
+        and tr.added_by = tu.user_id
+        and tr.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 5 APPPATH\Controllers\Sales_controller.php(108): App\Models\Sales_model->getReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 16:21:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=' at line 4 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tri.rese...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.rese...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.rese...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.rese...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('773e4ab2f458103...')
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f458103...', '1e89a2c28a9d78c...')
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 16:21:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 4 APPPATH\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 5 APPPATH\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('773e4ab2f45810349936458f9e763a2442b423ec300b92dd9f39727df~xrMLZYXFK$HPVECVLJlFo=', '1e89a2c28a9d78cbae60f2c9394651c2ba463a781cfe7fdb6ed04bc4Chb30hmNNmDTDw~bwCMSlUY=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 16:21:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=' at line 4 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tri.rese...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.rese...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.rese...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.rese...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('177e47fba4dc858...')
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('177e47fba4dc858...', 'f9ade902f614960...')
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 16:21:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=')
+ 4 APPPATH\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=')
+ 5 APPPATH\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('177e47fba4dc858a5223b6c3c03aa6091d47d3f7c3287c3b4f5584993wOTt~3OlWwWsZbHoGFUIR8=', 'f9ade902f614960bf7edf974a9baa5c079476d87559e17d48b423d48IlbmsEhA1YZjZhYaCuYByjU=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 16:22:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tri.rese...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.rese...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.rese...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.rese...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('79192ef2283cd75...')
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('79192ef2283cd75...', 'bb1d601b1dd7595...')
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 16:22:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=')
+ 4 APPPATH\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=')
+ 5 APPPATH\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('79192ef2283cd751e4aa6c4f833520a995c2c37e7b6f138b07dd5c442l3W3HqPI$FUjZ0UvAziFRA=', 'bb1d601b1dd759502501b370fd4a29cc59bc89fd625df9879e22c06ctorGX7KrLJbaTxmmhiFv0c4=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-14 16:23:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4 in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tri.rese...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.rese...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.rese...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.rese...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('92271bd596ae7db...')
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('92271bd596ae7db...', '35ead61f537ef59...')
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-14 16:23:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=')
+ 4 APPPATH\Models\Sales_model.php(290): CodeIgniter\Database\BaseConnection->query('select tri.reservation_item_id,tri.item_id, ti.name,tri.quantity,tri.price 
+        from tbl_item as ti, tbl_reservation_item as tri
+        where tri.item_id = ti.item_id
+        and tri.reservation_id = 92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=')
+ 5 APPPATH\Controllers\Sales_controller.php(111): App\Models\Sales_model->getReserveItem('92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->editReservation('92271bd596ae7dbf09dd98ea98208f9140d040915eb25f56aa62150fVtsucVakxgz$WTX$rodZO0U=', '35ead61f537ef596a52c4573789b5b019a4c0e01d3c3e68299f14a67KZmUxbDvusrdLBpTWL8dVPU=')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:46:05 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:49:26 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:52:34 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:53:01 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('b51fe7c42ccbf07de42526938cd8208a93f4c01247157cf0e99b6ea2zIrGCEtX2CZlLNLzwJuPumE=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 16:53:20 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:00:14 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:00:29 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:04:23 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:04:49 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('e9be78a2fa9eeaf2b764408ec95b826d37baf974a07a195163c84d240hwpmPc$cMAT9MPOKSx$vhg=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:11:42 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('5e848873a6942ac2123c88f520ae0dfb2b9b202ab791ef18abf3233a5aowuAsGOMEXAT8iYvbK74o=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('5e848873a6942ac2123c88f520ae0dfb2b9b202ab791ef18abf3233a5aowuAsGOMEXAT8iYvbK74o=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 09:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 09:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 17:28:43 --> Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 137.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(137): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Models\Sales_model.php(205): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('')
+ 3 APPPATH\Controllers\Sales_controller.php(147): App\Models\Sales_model->updateReservation('f6334f449504c0a6d919ba7cab4e341626093f72a5358bc833b3ad13AcmR$6NK3~ggRRIkLxN5Znw=')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sales_controller->updateReservation('f6334f449504c0a6d919ba7cab4e341626093f72a5358bc833b3ad13AcmR$6NK3~ggRRIkLxN5Znw=')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sales_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

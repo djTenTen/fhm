@@ -1,0 +1,730 @@
+INFO - 2023-06-06 01:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-06 09:51:32 --> mysqli_sql_exception: Table 'db_furniturehouse.category' doesn't exist in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from c...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from c...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from c...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Item_model.php(44): CodeIgniter\Database\BaseConnection->query('select * from c...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Item_controller.php(50): App\Models\Item_model->getCategory()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-06 09:51:32 --> Table 'db_furniturehouse.category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from category', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from category')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from category')
+ 4 APPPATH\Models\Item_model.php(44): CodeIgniter\Database\BaseConnection->query('select * from category')
+ 5 APPPATH\Controllers\Item_controller.php(50): App\Models\Item_model->getCategory()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 01:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-06 09:51:45 --> mysqli_sql_exception: Table 'db_furniturehouse.tbl_category' doesn't exist in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from t...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from t...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from t...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Item_model.php(44): CodeIgniter\Database\BaseConnection->query('select * from t...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Item_controller.php(50): App\Models\Item_model->getCategory()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-06 09:51:45 --> Table 'db_furniturehouse.tbl_category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from tbl_category', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from tbl_category')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from tbl_category')
+ 4 APPPATH\Models\Item_model.php(44): CodeIgniter\Database\BaseConnection->query('select * from tbl_category')
+ 5 APPPATH\Controllers\Item_controller.php(50): App\Models\Item_model->getCategory()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 01:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 09:51:58 --> Unclosed '{' on line 65
+in APPPATH\Views\item\category.php on line 81.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 3 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 01:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 01:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 10:13:34 --> Undefined array key "user_id"
+in APPPATH\Views\item\category.php on line 93.
+ 1 APPPATH\Views\item\category.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 02:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 10:14:03 --> Undefined array key "user_id"
+in APPPATH\Views\item\category.php on line 93.
+ 1 APPPATH\Views\item\category.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 02:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 10:14:26 --> Undefined variable $au
+in APPPATH\Views\item\category.php on line 132.
+ 1 APPPATH\Views\item\category.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $au', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 02:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 02:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-06 11:09:15 --> [DEPRECATED] ucwords(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\item\category.php on line 75.
+ 1 APPPATH\Views\item\category.php(75): ucwords(null)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 03:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-06 11:09:43 --> [DEPRECATED] ucwords(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\item\category.php on line 75.
+ 1 APPPATH\Views\item\category.php(75): ucwords(null)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 03:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-06-06 11:09:53 --> [DEPRECATED] ucwords(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\item\category.php on line 75.
+ 1 APPPATH\Views\item\category.php(75): ucwords(null)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/category', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(53): view('item/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->category()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 03:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 11:14:15 --> Invalid file: "item/additem.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('item/additem.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additem', [], true)
+ 3 APPPATH\Controllers\Item_controller.php(46): view('item/additem', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 03:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 11:19:26 --> Call to undefined method CodeIgniter\Encryption\Handlers\OpenSSLHandler::enrypt()
+in APPPATH\Views\item\additems.php on line 27.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 4 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 03:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 03:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 13:21:36 --> Undefined variable $mysqli
+in APPPATH\Views\item\additems.php on line 27.
+ 1 APPPATH\Views\item\additems.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mysqli', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 05:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 13:21:55 --> Undefined variable $item_category
+in APPPATH\Views\item\additems.php on line 30.
+ 1 APPPATH\Views\item\additems.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item_category', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 05:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 05:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 06:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 14:56:38 --> Class "App\Models\File" not found
+in APPPATH\Models\Item_model.php on line 110.
+ 1 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:06:05 --> Undefined variable $site_url
+in APPPATH\Views\item\additems.php on line 54.
+ 1 APPPATH\Views\item\additems.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $site_url', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:08:07 --> fopen(http://localhost/adminfhm/writable/uploads/itemphotos/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 179.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/adminfhm/writable/uploads/itemphotos/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\system\\HTTP\\Files\\UploadedFile.php', 179)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(179): fopen('http://localhost/adminfhm/writable/uploads/itemphotos/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/adminfhm/writable/uploads/itemphotos/')
+ 4 APPPATH\Models\Item_model.php(114): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/adminfhm/writable/uploads/itemphotos/', '545')
+ 5 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:20:16 --> fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 179.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\system\\HTTP\\Files\\UploadedFile.php', 179)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(179): fopen('http://localhost/adminfhm//public/uploads/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/adminfhm//public/uploads/')
+ 4 APPPATH\Models\Item_model.php(117): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/adminfhm//public/uploads/', '545')
+ 5 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:21:16 --> fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 179.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\system\\HTTP\\Files\\UploadedFile.php', 179)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(179): fopen('http://localhost/adminfhm//public/uploads/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/adminfhm//public/uploads/')
+ 4 APPPATH\Models\Item_model.php(117): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/adminfhm//public/uploads/', '545')
+ 5 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:21:29 --> fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 179.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\system\\HTTP\\Files\\UploadedFile.php', 179)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(179): fopen('http://localhost/adminfhm//public/uploads/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/adminfhm//public/uploads/')
+ 4 APPPATH\Models\Item_model.php(117): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/adminfhm//public/uploads/', '545')
+ 5 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:21:42 --> fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 179.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/adminfhm//public/uploads/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\system\\HTTP\\Files\\UploadedFile.php', 179)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(179): fopen('http://localhost/adminfhm//public/uploads/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/adminfhm//public/uploads/')
+ 4 APPPATH\Models\Item_model.php(117): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/adminfhm//public/uploads/', '545')
+ 5 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:33:52 --> Undefined variable $i
+in APPPATH\Models\Item_model.php on line 109.
+ 1 APPPATH\Models\Item_model.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:34:24 --> Object of class CodeIgniter\HTTP\Files\UploadedFile could not be converted to int
+in APPPATH\Models\Item_model.php on line 109.
+ 1 APPPATH\Models\Item_model.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class CodeIgniter\\HTTP\\Files\\UploadedFile could not be converted to int', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:34:54 --> move_uploaded_file(http://localhost/adminfhm/public/uploads545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Models\Item_model.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(http://localhost/adminfhm/public/uploads545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Models\Item_model.php(109): move_uploaded_file('C:\\xampp\\tmp\\phpC28D.tmp', 'http://localhost/adminfhm/public/uploads545.jpg')
+ 3 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:35:51 --> move_uploaded_file(http://localhost/adminfhm/public/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Models\Item_model.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(http://localhost/adminfhm/public/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Models\Item_model.php(109): move_uploaded_file('C:\\xampp\\tmp\\phpA184.tmp', 'http://localhost/adminfhm/public/uploads/545.jpg')
+ 3 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:36:27 --> move_uploaded_file(http://localhost/adminfhm/writable/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Models\Item_model.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(http://localhost/adminfhm/writable/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Models\Item_model.php(109): move_uploaded_file('C:\\xampp\\tmp\\php2E44.tmp', 'http://localhost/adminfhm/writable/uploads/545.jpg')
+ 3 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:39:32 --> move_uploaded_file(): Argument #1 ($from) must be of type string, array given
+in APPPATH\Models\Item_model.php on line 109.
+ 1 APPPATH\Models\Item_model.php(109): move_uploaded_file([...], 'http://localhost/adminfhm/writable/uploads/545.jpg')
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:40:02 --> move_uploaded_file(http://localhost/adminfhm/writable/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Models\Item_model.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(http://localhost/adminfhm/writable/uploads/545.jpg): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 109)
+ 2 APPPATH\Models\Item_model.php(109): move_uploaded_file('C:\\xampp\\tmp\\php76DA.tmp', 'http://localhost/adminfhm/writable/uploads/545.jpg')
+ 3 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:50:21 --> dirname() expects at least 1 argument, 0 given
+in APPPATH\Views\item\additems.php on line 55.
+ 1 APPPATH\Views\item\additems.php(55): dirname()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 15:50:55 --> getcwd() expects exactly 0 arguments, 1 given
+in APPPATH\Views\item\additems.php on line 54.
+ 1 APPPATH\Views\item\additems.php(54): getcwd('/public/uploads')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\additems.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/additems', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(46): view('item/additems', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->addItem()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 07:52:43 --> Unclosed '(' on line 110
+in APPPATH\Models\Item_model.php on line 117.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Item_model')
+ 3 APPPATH\Controllers\Item_controller.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Item_model')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Item_controller->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 07:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 07:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:19:01 --> Undefined array key "color"
+in APPPATH\Models\Item_model.php on line 119.
+ 1 APPPATH\Models\Item_model.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "color"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 119)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:20:16 --> Array to string conversion
+in APPPATH\Models\Item_model.php on line 131.
+ 1 APPPATH\Models\Item_model.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 131)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:21:00 --> Array to string conversion
+in APPPATH\Models\Item_model.php on line 131.
+ 1 APPPATH\Models\Item_model.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 131)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:22:14 --> Array to string conversion
+in APPPATH\Models\Item_model.php on line 131.
+ 1 APPPATH\Models\Item_model.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 131)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:22:51 --> Undefined array key 0
+in APPPATH\Models\Item_model.php on line 132.
+ 1 APPPATH\Models\Item_model.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\adminfhm\\app\\Models\\Item_model.php', 132)
+ 2 APPPATH\Controllers\Item_controller.php(105): App\Models\Item_model->registerItem()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->registerItem()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 08:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-06 16:58:22 --> mysqli_sql_exception: Unknown column 'ti.tic.item_category_id' in 'where clause' in C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\adminfhm\system\Database\MySQLi\Connection.php(295): mysqli->query('select tic.name...', 0)
+#1 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tic.name...')
+#2 C:\xampp\htdocs\adminfhm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tic.name...')
+#3 C:\xampp\htdocs\adminfhm\app\Models\Item_model.php(42): CodeIgniter\Database\BaseConnection->query('select tic.name...')
+#4 C:\xampp\htdocs\adminfhm\app\Controllers\Item_controller.php(69): App\Models\Item_model->getActiveItems()
+#5 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+#6 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+#7 C:\xampp\htdocs\adminfhm\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\adminfhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-06 16:58:22 --> Unknown column 'ti.tic.item_category_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select tic.name as catename, ti.name as itemname, ti.item_id
+        from tbl_item_category as tic,tbl_item as ti
+        where tic.item_category_id = ti.tic.item_category_id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select tic.name as catename, ti.name as itemname, ti.item_id
+        from tbl_item_category as tic,tbl_item as ti
+        where tic.item_category_id = ti.tic.item_category_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select tic.name as catename, ti.name as itemname, ti.item_id
+        from tbl_item_category as tic,tbl_item as ti
+        where tic.item_category_id = ti.tic.item_category_id')
+ 4 APPPATH\Models\Item_model.php(42): CodeIgniter\Database\BaseConnection->query('select tic.name as catename, ti.name as itemname, ti.item_id
+        from tbl_item_category as tic,tbl_item as ti
+        where tic.item_category_id = ti.tic.item_category_id')
+ 5 APPPATH\Controllers\Item_controller.php(69): App\Models\Item_model->getActiveItems()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:58:54 --> Undefined variable $as
+in APPPATH\Views\item\items.php on line 35.
+ 1 APPPATH\Views\item\items.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $as', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:59:10 --> Undefined variable $as
+in APPPATH\Views\item\items.php on line 38.
+ 1 APPPATH\Views\item\items.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $as', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 08:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 16:59:53 --> Undefined array key "status"
+in APPPATH\Views\item\items.php on line 43.
+ 1 APPPATH\Views\item\items.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:00:32 --> Undefined variable $adder
+in APPPATH\Views\item\items.php on line 44.
+ 1 APPPATH\Views\item\items.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adder', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:22:30 --> Undefined variable $as
+in APPPATH\Views\item\items.php on line 36.
+ 1 APPPATH\Views\item\items.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $as', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:22:55 --> Undefined array key "status"
+in APPPATH\Views\item\items.php on line 44.
+ 1 APPPATH\Views\item\items.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:23:17 --> Undefined variable $adder
+in APPPATH\Views\item\items.php on line 45.
+ 1 APPPATH\Views\item\items.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adder', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:23:40 --> Undefined variable $arr
+in APPPATH\Views\item\items.php on line 46.
+ 1 APPPATH\Views\item\items.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arr', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:24:16 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\item\items.php on line 5.
+ 1 APPPATH\Views\item\items.php(5): array_push(null, 'user-management')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:24:19 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\item\items.php on line 5.
+ 1 APPPATH\Views\item\items.php(5): array_push(null, 'user-management')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:24:21 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\item\items.php on line 5.
+ 1 APPPATH\Views\item\items.php(5): array_push(null, 'user-management')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:24:31 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\item\items.php on line 5.
+ 1 APPPATH\Views\item\items.php(5): array_push(null, 'user-management')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:24:42 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\item\items.php on line 5.
+ 1 APPPATH\Views\item\items.php(5): array_push(null, 'user-management')
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 17:25:06 --> Undefined array key "name"
+in APPPATH\Views\item\items.php on line 62.
+ 1 APPPATH\Views\item\items.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\adminfhm\\app\\Views\\item\\items.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('item/items', [], true)
+ 5 APPPATH\Controllers\Item_controller.php(72): view('item/items', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Item_controller->item()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Item_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 09:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 09:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
