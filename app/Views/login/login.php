@@ -84,7 +84,7 @@
 
 	<div class="content content-auth">
 		<div class="container">
-
+		<img src="<?= site_url(); ?>/asset/image/adminfhmlogo.svg" class="wd-80p mx-auto d-block mg-b-40">
 			<div class="sign-wrapper mg-l-auto mg-r-auto">
 			
 				<div class="mg-b-30 mg-r-auto mg-l-auto wd-90p">

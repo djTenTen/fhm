@@ -75,7 +75,7 @@ class Api_model extends  Model {
                 'category' => $row['category'],
                 'catalog_section_id' => $row['catalog_section_id'],
                 'catalog_id' => $row['catalog_id'],
-                'imgurl' => site_url('public/content/').$row['catalog_id'].'.jpg'
+                'imgurl' => site_url('public/content/').$row['catalog_id'].'.JPG'
             ];
 
             $key ++;

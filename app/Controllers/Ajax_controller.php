@@ -34,11 +34,18 @@ class Ajax_controller extends BaseController{
     }
 
 
+
+
+
+
+
+
+    
+
     /**
-        ____________________________________________________
-        
-        Items Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Items Module area
+        ----------------------------------------------------------
         for the active items
         * @return item data
     */
@@ -50,12 +57,20 @@ class Ajax_controller extends BaseController{
 
 
 
+
+
+
+
+
+
+
+
+
     
     /**
-        ____________________________________________________
-        
-        User Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Users Module area
+        ----------------------------------------------------------
         validation of username if exist
         * @return htmlcontent data
     */
@@ -78,11 +93,17 @@ class Ajax_controller extends BaseController{
 	}
 
 
+
+
+
+
+
+
+
     /**
-        ____________________________________________________
-        
-        Customer Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Customers Module area
+        ----------------------------------------------------------
         gets all the customers information
         * @return customer data
     */
@@ -127,10 +148,9 @@ class Ajax_controller extends BaseController{
 
 
     /**
-        ____________________________________________________
-        
-        Login Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Login Module area
+        ----------------------------------------------------------
         check the user's authentication
         * @return invalid data
     */
@@ -151,10 +171,9 @@ class Ajax_controller extends BaseController{
 
 
     /**
-        ____________________________________________________
-        
-        Reservation Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Reservation Module area
+        ----------------------------------------------------------
         gets the specific reservation information
         * @return reservation data
     */
@@ -180,10 +199,9 @@ class Ajax_controller extends BaseController{
 
 
     /**
-        ____________________________________________________
-        
-        Stock Transfer Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Stock Module area
+        ----------------------------------------------------------
         gets the specific stock transfer information
         * @return stock_transfer data
     */

@@ -166,7 +166,7 @@ class Accounting_model extends  Model {
     */
     public function saveExpense(){
 
-        $ed = $this->request->getPost('mme').'/'.$this->request->getPost('dde').'/'.$this->request->getPost('yye');
+        $ed = $this->request->getPost('yye').'-'.$this->request->getPost('mme').'-'.$this->request->getPost('dde');
 
         $expense = [
             'name' => ucfirst($this->request->getPost('name')),
@@ -205,7 +205,7 @@ class Accounting_model extends  Model {
 
         foreach($_POST['payment-method'] as $i => $val){
 
-            $pd = $_POST['mmp'][$i].'/'.$_POST['ddp'][$i].'/'.$_POST['yyp'][$i];
+            $pd = $_POST['yyp'][$i].'-'.$_POST['mmp'][$i].'-'.$_POST['ddp'][$i];
 
             if($_POST['payment-method'][$i] == 'check'){
                 $expenseitem = [
@@ -259,7 +259,7 @@ class Accounting_model extends  Model {
 
         $eid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID));
         $pid = $this->encrypter->decrypt($this->request->getPost('payment-id'));
-        $ed = $this->request->getPost('mme').'/'.$this->request->getPost('dde').'/'.$this->request->getPost('yye');
+        $ed = $this->request->getPost('yye').'-'.$this->request->getPost('mme').'-'.$this->request->getPost('dde');
 
         $expense = [
             'name' => ucfirst($this->request->getPost('name')),
@@ -299,7 +299,7 @@ class Accounting_model extends  Model {
 
         foreach($_POST['payment-method'] as $i => $val){
 
-            $pd = $_POST['mmp'][$i].'/'.$_POST['ddp'][$i].'/'.$_POST['yyp'][$i];
+            $pd = $_POST['yyp'][$i].'-'.$_POST['mmp'][$i].'-'.$_POST['ddp'][$i];
 
             if($_POST['payment-method'][$i] == 'check'){
                 $expenseitem = [

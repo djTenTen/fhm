@@ -35,6 +35,7 @@ class Ajax_model extends  Model {
     protected $tbls = "tbl_supplier";
     protected $tblsess = "tbl_session";
     protected $tblr = "tbl_reservation";
+    protected $tblri = "tbl_reservation_item";
     protected $tblwh = "tbl_warehouse";
     protected $tblst = "tbl_stock_transfer";
 
@@ -56,10 +57,9 @@ class Ajax_model extends  Model {
 
 
     /**
-        ____________________________________________________
-        
-        Login Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Login Module area
+        ----------------------------------------------------------
         AJAX FUNCTION get items on the input/auto search
         * @return items->json_encoded data
     */
@@ -104,10 +104,9 @@ class Ajax_model extends  Model {
 
 
     /**
-        ____________________________________________________
-        
-        Customer Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Customers Module area
+        ----------------------------------------------------------
         AJAX FUNCTION get customers on the input/auto search
         * @return customers->json_encoded data
     */
@@ -200,10 +199,9 @@ class Ajax_model extends  Model {
 
 
     /**
-        ____________________________________________________
-        
-        Supplier Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Supplier Module area
+        ----------------------------------------------------------
         AJAX FUNCTION get supplier on the input/auto search
         * @return supplier->json_encoded data
     */
@@ -255,10 +253,9 @@ class Ajax_model extends  Model {
 
     
     /**
-        ____________________________________________________
-        
-        Login Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Login Module area
+        ----------------------------------------------------------
         check the user's authentication
         * @method checkAuthentication() is being executed during the login of the user
         * @param uID encrypted data of user_id
@@ -271,8 +268,9 @@ class Ajax_model extends  Model {
     public function checkAuthentication(){
 
         $dsID = $this->encrypter->decrypt($_SESSION['sessionID']);
+        $uID = $this->encrypter->decrypt($_SESSION['userID']);
         $system_session = $_SESSION['SysSess'];
-        $result = $this->db->query("select * from tbl_session where session_id = $dsID and system_session = '$system_session' ");
+        $result = $this->db->query("select * from ".$this->tblsess." where session_id = $dsID and system_session = '$system_session' and id =  $uID");
         
         if($result->getNumRows() > 0){
 
@@ -285,10 +283,10 @@ class Ajax_model extends  Model {
             $totalMinutes = ($interval->days * 24 * 60) + ($interval->h * 60) + $interval->i;
 
             if($totalMinutes >= 30){
-                
-                $builder = $this->db->table("tbl_session")->where("session_id", $dsID)->delete();
 
-                $this->session->remove(['authentication','userID','sessionID','SysSess','name','groupname','groupid' ,'status' ,'warehouse_id','uwarehouse']);
+                $this->db->table($this->tblsess)->where("session_id", $dsID)->delete();
+                $_SESSION['authentication'] = false;
+                $this->session->remove(['userID','sessionID','SysSess','name','accounttype','status']);
                 $_SESSION['session_timeout'] = 'session_timeout';
                 echo "invalid";
 
@@ -300,7 +298,8 @@ class Ajax_model extends  Model {
 
         }else{
 
-            $this->session->remove(['authentication','userID','sessionID','SysSess','name','groupname','groupid' ,'status' ,'warehouse_id','uwarehouse']);
+            $_SESSION['authentication'] = false;
+            //$this->session->remove(['userID','sessionID','SysSess','name','accounttype','status' ,'status']);
             $_SESSION['eject'] = 'eject';
             echo "invalid";
 
@@ -337,10 +336,9 @@ class Ajax_model extends  Model {
 
 
     /**
-        ____________________________________________________
-        
-        Login Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Reservation Module area
+        ----------------------------------------------------------
         * @method viewReservationDetails() is to get the reservation information based on id
         * @param rID encrypted data of reservation_id
         * @var rid decrypted data of reservation_id
@@ -451,10 +449,9 @@ class Ajax_model extends  Model {
 
 
     /**
-        ____________________________________________________
-        
-        Stock Transfer Area
-        ____________________________________________________
+        ----------------------------------------------------------
+        Stock Transfer Module area
+        ----------------------------------------------------------
         * @method viewSTdetails() is to get the stock transfer information based on id
         * @param stID encrypted data of reservation_id
         * @var stid decrypted data of reservation_id

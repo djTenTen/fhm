@@ -12,8 +12,8 @@ class Accounting_controller extends BaseController{
     
     /**
         Properties being used on this file
+        * @property system_model to load the system model
         * @property accounting_model to load the accounting model
-        * @property login_model to load the login model
         * @property request for the post function method
         * @property encrypter use for encryption
     */
@@ -39,6 +39,21 @@ class Accounting_controller extends BaseController{
     }
 
 
+    /**
+        ----------------------------------------------------------
+        Expense Module area
+        ----------------------------------------------------------
+        * @method viewExpense() use to display the expense page
+        * @param state contains data submitted which expense should be displayed
+        * @var data->state contains the expense sub information
+        * @var data->expense contains the expense information
+        * @var data->category contains the expense category information
+        * @var data->paymentmethod contains the system default payment method
+        * @var data->bank contains bank accounts information
+        * being displayed on the expense  page
+        * @var page is the name of the php file
+        * @var data->title displays the title on the Tab browser
+    */
     public function viewExpense($state){
 
         // main content
@@ -58,6 +73,17 @@ class Accounting_controller extends BaseController{
     
     }
 
+
+    /**
+        * @method addExpense() use to display the expense adding page
+        * @var data->expense contains the expense information
+        * @var data->category contains the expense category information
+        * @var data->paymentmethod contains the system default payment method
+        * @var data->bank contains bank accounts information
+        * being displayed on the expense page
+        * @var page is the name of the php file
+        * @var data->title displays the title on the Tab browser
+    */
     public function addExpense(){
 
         // main content
@@ -75,6 +101,21 @@ class Accounting_controller extends BaseController{
     }
 
 
+    /**
+        * @method editExpense() use to display the expense edit page
+        * @param eID encrypted data of expense id
+        * @var data->eID passing the data from @param eID
+        * @var data->exp contains the expense information
+        * @var data->summexpense contains the expense summary information
+        * @var data->phistory contains payment history of expense
+        * @var data->ddate cropping the date
+        * @var data->category contains the expense category information
+        * @var data->paymentmethod contains the system default payment method
+        * @var data->bank contains bank accounts information
+        * being displayed on the expense page
+        * @var page is the name of the php file
+        * @var data->title displays the title on the Tab browser
+    */
     public function editExpense($eID){
 
         // main content
@@ -87,7 +128,7 @@ class Accounting_controller extends BaseController{
         $data['summexpense'] = $this->accounting_model->getSummaryExpense($this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID)));
         $data['phistory'] = $this->accounting_model->paymentHistory($this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID)));
         
-        $data['ddate'] = explode('/', $data['exp']['date']);
+        $data['ddate'] = explode('-', $data['exp']['date']);
 
         $data['category'] = $this->accounting_model->getCategory();
         $data['paymentmethod'] = $this->system_model->getPaymentMethod();
@@ -100,6 +141,16 @@ class Accounting_controller extends BaseController{
     }
 
 
+    /**
+        * @method printVoucher() use to print the voucher to pdf
+        * @param eID encrypted data of expense id
+        * @var data->exp contains the expense information
+        * @var data->summexpense contains the expense summary information
+        * @var data->phistory contains payment history of expense
+        * being displayed on the expense page
+        * @var page is the name of the php file
+        * @var data->title displays the title on the Tab browser
+    */
     public function printVoucher($eID){
 
         $page = 'printvoucher';
@@ -113,6 +164,11 @@ class Accounting_controller extends BaseController{
     }
 
 
+    /**
+        * @method saveExpense() is use to route the registration of expense to the model
+        * @var session->expense_added the msg display on the Interface
+        * @return to->addexpense page
+    */
     public function saveExpense(){
 
         $this->accounting_model->saveExpense();
@@ -121,6 +177,12 @@ class Accounting_controller extends BaseController{
 
     }
 
+
+    /**
+        * @method updateExpense() is use to route the update of expense to the model
+        * @var session->expense_updated the msg display on the Interface
+        * @return to->expense page
+    */
     public function updateExpense($eID){
 
         $this->accounting_model->updateExpense($eID);
@@ -129,6 +191,12 @@ class Accounting_controller extends BaseController{
 
     }
 
+
+    /**
+        * @method updateExpensePending() is use to route the update of expense to the model
+        * @var session->expense_pending the msg display on the Interface
+        * @return to->expense page
+    */
     public function updateExpensePending($eID){
 
         $this->accounting_model->updateExpensePending($eID);
@@ -137,6 +205,12 @@ class Accounting_controller extends BaseController{
 
     }
 
+
+    /**
+        * @method updateExpenseVerified() is use to route the update of expense to the model
+        * @var session->expense_completed the msg display on the Interface
+        * @return to->expense page
+    */
     public function updateExpenseVerified($eID){
 
         $this->accounting_model->updateExpenseVerified($eID);
@@ -145,6 +219,12 @@ class Accounting_controller extends BaseController{
 
     }
 
+
+    /**
+        * @method updateExpenseCancelled() is use to route the update of expense to the model
+        * @var session->expense_cancelled the msg display on the Interface
+        * @return to->expense page
+    */
     public function updateExpenseCancelled($eID){
 
         $this->accounting_model->updateExpenseCancelled($eID);
@@ -168,8 +248,7 @@ class Accounting_controller extends BaseController{
 
 
 
-
-
+    
     public function viewPayment($area){
 
         // main content
@@ -211,7 +290,21 @@ class Accounting_controller extends BaseController{
 
 
 
-
+    /**
+        ----------------------------------------------------------
+        Expense category Module area
+        ----------------------------------------------------------
+        * @method viewExpense() use to display the expense page
+        * @param state contains data submitted which expense should be displayed
+        * @var data->state contains the expense sub information
+        * @var data->expense contains the expense information
+        * @var data->category contains the expense category information
+        * @var data->paymentmethod contains the system default payment method
+        * @var data->bank contains bank accounts information
+        * being displayed on the expense  page
+        * @var page is the name of the php file
+        * @var data->title displays the title on the Tab browser
+    */
     public function expenseCategory(){
 
         // main content

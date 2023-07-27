@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://192.168.0.11/new/admin.furniturehousemanila.com/';
+    public string $baseURL = 'http://localhost/new/admin.furniturehousemanila.com/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.    

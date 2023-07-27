@@ -240,187 +240,7 @@
                                     <button type="button" class="btn btn-primary btn-icon btn-sm load-data" data-toggle="modal" data-target="#modaledit" data-customer-id="<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($acorp['customer_id']))?>"><i class="fas fa-edit"></i></button>
                                 <?php }?>
 
-                                <!-- MODAL EDIT -->
-                                <!-- Modal -->
-                                <div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                        <div class="modal-content">
-                                        <div class="modal-header">  
-                                            <h5 class="modal-title" id="exampleModalLabel">Edit Customer</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <!-- ID BEING DECODED AND ENCRYPTED DUE TO THE ERROR ON THE URI ROUTES -->
-                                            <form id="myform" action="" method="post">
-
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group row">
-                                                    <label class="col-md-4 col-form-label">Name</label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control name" type="text" name="name" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="form-group row">
-                                                    <label class="col-md-4 col-form-label">Address</label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control address" type="text" name="address" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="form-group row">
-                                                    <label class="col-md-4 col-form-label">Contact Number</label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control contact-number" type="text" name="contact-number" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="form-group row">
-                                                    <label class="col-md-4 col-form-label">E-mail Address</label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control email-address" type="email" name="email-address" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="form-group row">
-                                                    <label class="col-md-4 col-form-label">Remarks</label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control remarks" type="text" name="remarks" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Username</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control username" type="text" name="username" value="" readonly>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Password</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control password" type="text" name="password" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Discount</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control discount" type="number" name="discount" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Website</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control website" type="text" name="website" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Facebook</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control facebook" type="text" name="facebook" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Instagram</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control instagram" type="text" name="instagram" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Lazada</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control lazada" type="text" name="lazada" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Shopee</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control shopee" type="text" name="shopee" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Authorized Representative</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control corporate-contact-person" type="text" name="corporate-contact-person" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Contact Number</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control corporate-contact-number" type="text" name="corporate-contact-number" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-4 col-form-label">Email Address</label>
-                                                        <div class="col-md-8">
-                                                            <input class="form-control corporate-email-address" type="text" name="corporate-email-address" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-6">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-3 col-form-label">Status</label>
-                                                        <div class="custom-control custom-switch">
-                                                            <input value="inactive" name="status" class="custom-control-label iac" type="hidden" id="" />
-                                                            <input value="active" name="status" type="checkbox" class="custom-control-input ac" id="customSwitch">
-                                                            <label class="custom-control-label" for="customSwitch">Inactive / Active</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-primary">Save changes</button>
-                                            <?= form_close();?>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END OF MODAL EDIT -->
+                                
                             </td>
                         </tr>
                     <?php }?>
@@ -432,6 +252,189 @@
     </div>
 
 </div>
+
+
+<!-- MODAL EDIT -->
+<!-- Modal -->
+<div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">  
+            <h5 class="modal-title" id="exampleModalLabel">Edit Customer</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- ID BEING DECODED AND ENCRYPTED DUE TO THE ERROR ON THE URI ROUTES -->
+            <form id="myform" action="" method="post">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">Name</label>
+                    <div class="col-md-8">
+                        <input class="form-control name" type="text" name="name" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">Address</label>
+                    <div class="col-md-8">
+                        <input class="form-control address" type="text" name="address" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">Contact Number</label>
+                    <div class="col-md-8">
+                        <input class="form-control contact-number" type="text" name="contact-number" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">E-mail Address</label>
+                    <div class="col-md-8">
+                        <input class="form-control email-address" type="email" name="email-address" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">Remarks</label>
+                    <div class="col-md-8">
+                        <input class="form-control remarks" type="text" name="remarks" value="">
+                    </div>
+                </div>
+            </div>
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Username</label>
+                        <div class="col-md-8">
+                            <input class="form-control username" type="text" name="username" value="" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Password</label>
+                        <div class="col-md-8">
+                            <input class="form-control password" type="text" name="password" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Discount</label>
+                        <div class="col-md-8">
+                            <input class="form-control discount" type="number" name="discount" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Website</label>
+                        <div class="col-md-8">
+                            <input class="form-control website" type="text" name="website" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Facebook</label>
+                        <div class="col-md-8">
+                            <input class="form-control facebook" type="text" name="facebook" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Instagram</label>
+                        <div class="col-md-8">
+                            <input class="form-control instagram" type="text" name="instagram" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Lazada</label>
+                        <div class="col-md-8">
+                            <input class="form-control lazada" type="text" name="lazada" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Shopee</label>
+                        <div class="col-md-8">
+                            <input class="form-control shopee" type="text" name="shopee" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Authorized Representative</label>
+                        <div class="col-md-8">
+                            <input class="form-control corporate-contact-person" type="text" name="corporate-contact-person" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Contact Number</label>
+                        <div class="col-md-8">
+                            <input class="form-control corporate-contact-number" type="text" name="corporate-contact-number" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Email Address</label>
+                        <div class="col-md-8">
+                            <input class="form-control corporate-email-address" type="text" name="corporate-email-address" value="" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Status</label>
+                        <div class="custom-control custom-switch">
+                            <input value="inactive" name="status" class="custom-control-label iac" type="hidden" id="" />
+                            <input value="active" name="status" type="checkbox" class="custom-control-input ac" id="customSwitch">
+                            <label class="custom-control-label" for="customSwitch">Inactive / Active</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <?= form_close();?>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- END OF MODAL EDIT -->
 
 <script>
 

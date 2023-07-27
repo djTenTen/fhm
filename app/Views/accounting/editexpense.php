@@ -25,7 +25,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <select name="mme" class="form-control" required>
-                                        <option value="<?= $ddate[0];?>" selected><?= date("F",mktime(0, 0, 0, $ddate[0], 10));?></option>
+                                        <option value="<?= $ddate[1];?>" selected><?= date("F",mktime(0, 0, 0, $ddate[1], 10));?></option>
                                         <option value="01">January</option>
                                         <option value="02">February</option>
                                         <option value="03">March</option>
@@ -43,7 +43,7 @@
 
                                 <div class="col-3">
                                     <select name="dde" class="form-control" required>
-                                        <option value="<?= $ddate[1];?>" selected><?= $ddate[1];?></option>
+                                        <option value="<?= $ddate[2];?>" selected><?= $ddate[2];?></option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                         <option value="03">03</option>
@@ -79,7 +79,7 @@
                                 </div>/
                                 <div class="col-4">
                                     <select name="yye" class="form-control" required>
-                                        <option value="<?= $ddate[2];?>" selected><?= $ddate[2];?></option>
+                                        <option value="<?= $ddate[0];?>" selected><?= $ddate[0];?></option>
                                         <option value="2024">2024</option>
                                         <option value="2025">2025</option>
                                         <option value="2026">2026</option>
@@ -156,7 +156,7 @@
                             <tbody id="tpaymentdetails">
                                 <?php 
                                     foreach($phistory as $ph){
-                                    $dd = explode('/', $ph['date']);
+                                    $dd = explode('-', $ph['date']);
                                 ?>
                                 <tr>
                                     <td>
@@ -168,12 +168,12 @@
                                             <?php } ?>
                                         </select>
                                     </td>
-                                    <td data-name="description"     >
+                                    <td data-name="description">
 
                                         <div class="row">
                                             <div class="col-4"> 
                                                 <select name="mmp[]" class="form-control" required>
-                                                    <option value="<?= $dd[0]?>" selected><?= date("F",mktime(0, 0, 0, $dd[0], 10));?></option>
+                                                    <option value="<?= $dd[1]?>" selected><?= date("F",mktime(0, 0, 0, $dd[1], 10));?></option>
                                                     <option value="01">January</option>
                                                     <option value="02">February</option>
                                                     <option value="03">March</option>
@@ -191,7 +191,7 @@
 
                                             <div class="col-3">
                                                 <select name="ddp[]" class="form-control" required>
-                                                    <option value="<?= $dd[1]?>" selected><?= $dd[1]?></option>
+                                                    <option value="<?= $dd[2]?>" selected><?= $dd[2]?></option>
                                                     <option value="01">01</option>
                                                     <option value="02">02</option>
                                                     <option value="03">03</option>
@@ -227,7 +227,7 @@
                                             </div>/
                                             <div class="col-4">
                                                 <select name="yyp[]" class="form-control" required>
-                                                    <option value="<?= $dd[2]?>" selected><?= $dd[2]?></option>
+                                                    <option value="<?= $dd[0]?>" selected><?= $dd[0]?></option>
                                                     <option value="2024">2024</option>
                                                     <option value="2025">2025</option>
                                                     <option value="2026">2026</option>
