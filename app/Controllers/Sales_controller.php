@@ -503,4 +503,33 @@ class Sales_controller extends BaseController{
 
 
 
+
+
+
+
+    public function computeDelivery(){
+
+        // main content
+        $page = 'computelocation';
+        $data['title'] = 'Compute Location';
+
+        echo view('includes/header', $data);
+        echo view('sales/'.$page, $data);
+        echo view('includes/footer');
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

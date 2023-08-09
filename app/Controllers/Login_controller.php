@@ -103,10 +103,15 @@ class Login_controller extends BaseController{
                 'status' => $res['status'],
                 'warehouse_id' => $this->encrypter->encrypt($res['warehouse_id']),
                 'uwarehouse' => $res['uwarehouse']
-                
             );
             $this->session->set($sessdata);
-            return redirect()->to(site_url('dashboard'));
+
+            if(empty($_SESSION['last_uri'])){
+                return redirect()->to(site_url('dashboard'));
+            }else{
+                return redirect()->to(site_url($_SESSION['last_uri']));
+            }
+            
 
         }
 

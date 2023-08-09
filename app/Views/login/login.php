@@ -122,18 +122,22 @@
 						unset($_SESSION['session_timeout']);
 					}
 
-
-					
-
 				?>
 
 				</div>
 
 				<?= form_open('authenticate');?>
+					<h3 class="tx-color-01 mg-b-5">Sign In</h3>
+					<p class="tx-color-03 tx-16 mg-b-40">Welcome back! Please sign-in to continue.</p>
+
 					<div class="form-group">
+						<label>Username</label>
 						<input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
 					</div>
 					<div class="form-group">
+						<div class="d-flex justify-content-between mg-b-5">
+							<label class="mg-b-0-f">Password</label>
+						</div>
 						<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
 					</div>
 					<button type="submit" class="btn btn-primary btn-block">Login</button>

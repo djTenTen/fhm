@@ -11,6 +11,8 @@
 	foreach($user_model->getUserAccess($_SESSION['groupid']) as $access){
 		array_push($arr, $access['name']);
 	}
+
+	$_SESSION['last_uri'] = uri_string();
 	
 ?>
 
@@ -273,6 +275,7 @@
 						<?php if(in_array('add-sales', $arr)){?>
 							<li class="nav-item"><a class="nav-item" href="<?= site_url('/quotation/add'); ?>">Add New</a></li>
 						<?php }?>
+						<li class="nav-item"><a class="nav-item" href="<?= site_url('/quotation/computedelivery'); ?>">Compute Delivery</a></li>
 					</ul>
 				</div>
 				</li>
