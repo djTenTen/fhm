@@ -76,136 +76,11 @@
                 <td><?= $ap['nameuser'];?></td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-success btn-icon btn-sm" data-toggle="modal" data-target="#modalview<?= $ap['purchase_id']; ?>"><i class="fas fa-eye"></i></button>
+                        <button type="button" class="btn btn-success btn-icon btn-sm load-data" data-toggle="modal" data-target="#modalview" data-purchase-id="<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ap['purchase_id'])); ?>"><i class="fas fa-eye"></i></button>
                         <?php if(in_array('edit-purchase', $arr)){?>
                             <a href="<?= site_url().'/purchase/edit/'.str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ap['purchase_id'])); ?>" class="btn btn-primary btn-icon btn-sm"><i class="fas fa-edit"></i></a>
                         <?php }?>
                     </div>
-
-                    <!-- MODAL VIEW -->
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalview<?= $ap['purchase_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Purchase</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- TABLE VIEW FOR PURCHASE INFORMATION -->
-                                    <table class="table table-bordered mb-4">
-                                        <tbody>
-                                            <tr>
-                                                <td style="width: 20%">ID</td>
-                                                <td style="width: 30%"><?= $ap['purchase_id'];?></td>
-                                                <td style="width: 20%">Deliver To:</td>
-                                                <td style="width: 30%"><?= $ap['warehouse'];?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Invoice No.</td>
-                                                <td><?= $ap['invoice_no'];?></td>
-                                                <td>Invoice Date</td>
-                                                <td><?= $ap['invoice_date'];?></td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td>Supplier</td>
-                                                <td colspan="3"><?= $ap['name'];?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Status</td>
-                                                <td colspan="3"><span class="badge badge-<?php if($ap['status']=='pending'){echo 'primary';}elseif($ap['status']=='delivered'){echo 'success';}elseif($ap['status']=='cancelled'){echo 'danger';}?>"><?= $ap['status'];?></span></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Payment Terms</td>
-                                                <td colspan="3"><?php echo ucwords(str_replace("-", " ", $ap['payment_method'])); ?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Added By</td>
-                                                <td><?= $ap['nameuser'];?></td>
-                                                <td>Added On</td>
-                                                <td><?= $ap['added_on'];?></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- END OF TABLE VIEW FOR PURCHASE INFORMATION -->
-
-                                    <!-- TABLE VIEW FOR PURCHASE ITEM INFORMATION -->
-                                    <table class="table table-bordered mg-b-30">
-                                        <thead>
-                                                <tr>
-                                                <th style="width: 10%">Quantity</th>
-                                                <th style="width: 45%" colspan="2">Description</th>
-                                                <th style="width: 10%">Price</th>
-                                                <th style="width: 15%">Sub-Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                                $count = 0;
-                                                $gtotal = 0;
-                                                $rv = 0;
-                                                $wv = 0;
-                                                foreach($purchase_model->getPurchaseItems($ap['purchase_id']) as $pitems){
-                                                $gtotal += ($pitems['quantity'] * $pitems['price']);
-                                                $count += $pitems['quantity'];
-                                                $rv += ($pitems['quantity'] * $pitems['retail_price']);
-                                                $wv += ($pitems['quantity'] * $pitems['wholesale_price']);
-                                            ?>
-                                            <tr>
-                                                <td class="align-middle text-center"><?= $pitems['quantity'];?></td>
-                                                <td class="align-middle" style="width: 1%;">
-                                                    
-                                                </td>
-                                                <td class="align-middle"><?= $pitems['name'];?></td>
-                                                <td class="text-right align-middle"><?php echo number_format($pitems['price'], 2); ?></td>
-                                                <td class="text-right align-middle"><?= number_format($pitems['quantity'] * $pitems['price'], 2); ?></td>
-                                            </tr>
-                                            <?php
-                                                }
-                                            ?>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td class="text-center"><?= $count; ?></td>
-                                                <td class="text-right" colspan="3">Grand Total</td>
-                                                <td class="text-right"><?= number_format($gtotal, 2); ?></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                
-                                    <div class="row mg-b-30">
-                                        <div class="col-lg-6 tx-24">Retail Value: <?= number_format($rv, 2) ?></div>
-                                        <div class="col-lg-6 tx-24">Wholesale Value: <?= number_format($wv, 2) ?></div>
-                                    </div>
-
-                                    <!-- END OF TABLE VIEW FOR PURCHASE ITEM INFORMATION -->
-                                </div>
-                                <div class="modal-footer">
-                                    <?= form_open("markpending/".str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ap['purchase_id'])))?>
-                                        <button type="submit" class="btn btn-danger">Mark Pending</button>
-                                    <?= form_close()?>
-                                    <?= form_open("markdelivered/".str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ap['purchase_id'])))?>
-                                        <button type="submit" class="btn btn-success">Mark Delivered</button>
-                                    <?= form_close()?>
-                                    <?= form_open("markcancelled/".str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ap['purchase_id'])))?>
-                                        <button type="submit" class="btn btn-warning">Mark Cancelled</button>
-                                    <?= form_close()?>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END OF MODAL VIEW -->
-
-                        
                 </td>
             </tr>
             <?php }?>
@@ -213,3 +88,210 @@
     </table>
 
 </div>
+
+
+
+<!-- MODAL VIEW -->
+<!-- Modal -->
+<div class="modal fade" id="modalview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Purchase</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- TABLE VIEW FOR PURCHASE INFORMATION -->
+           <div class="row1"></div>
+
+
+           <!-- TABLE VIEW FOR PURCHASE ITEM INFORMATION -->
+           <table class="table table-bordered mg-b-30">
+                <thead>
+                        <tr>
+                        <th style="width: 10%">Quantity</th>
+                        <th style="width: 45%" colspan="2">Description</th>
+                        <th style="width: 10%">Price</th>
+                        <th style="width: 15%">Sub-Total</th>
+                    </tr>
+                </thead>
+                <tbody class="pitems">
+  
+                </tbody>
+                <tfoot class="fitems">
+                    
+                </tfoot>
+            </table>
+
+            <div class="rvwv row">
+                
+            </div>
+           
+        </div>
+        <div class="modal-footer">
+            <form id="mpending" action="" method="post">
+                <button type="submit" class="btn btn-danger">Mark Pending</button>
+            </form>
+
+            <form id="mdelivered" action="" method="post">
+                <button type="submit" class="btn btn-success">Mark Delivered</button>
+            </form>
+
+            <form id="mcancelled" action="" method="post">
+                <button type="submit" class="btn btn-warning">Mark Cancelled</button>
+            </form>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- END OF MODAL VIEW -->
+
+
+
+<script>
+
+    function numberformat(num){
+        return Number(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    $(document).ready(function() {
+        // When the button is clicked, show the modal and load the data
+        $(".load-data").on("click", function() {
+            // Show the modal
+            var pID = $(this).data('purchase-id');
+            // Fetch data using AJAX
+
+            $('#mpending').attr('action', "<?= site_url("purchase/markpending/");?>" + pID);
+            $('#mdelivered').attr('action', "<?= site_url("purchase/markdelivered/");?>" + pID);
+            $('#mcancelled').attr('action', "<?= site_url("purchase/markcancelled/");?>" + pID);
+
+            var span;
+            $.ajax({
+                url: "<?= site_url('purchase/getpurchasedetails/')?>" + pID,  // Replace with your actual data endpoint URL
+                method: "GET",
+                dataType: 'json',
+                success: function(data) {
+
+                    if(data.status == 'pending'){
+                        span = `<span class="badge badge-primary">${ data.status }</span>`;
+                    }else if(data.status == 'delivered'){
+                        span = `<span class="badge badge-success">${ data.status }</span>`;
+                    }else if(data.status == 'cancelled'){
+                        span = `<span class="badge badge-danger">${ data.status }</span>`;
+                    }
+
+                    // Populate the modal body with the fetched data
+                    $(".row1").html(
+                        `
+                        <table class="table table-bordered mb-4">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 20%">ID</td>
+                                    <td style="width: 30%">${ data.purchase_id}</td>
+                                    <td style="width: 20%">Deliver To:</td>
+                                    <td style="width: 30%">${ data.warehouse}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Invoice No.</td>
+                                    <td>${ data.invoice_no}</td>
+                                    <td>Invoice Date</td>
+                                    <td>${ data.invoice_date}</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>Supplier</td>
+                                    <td colspan="3">${ data.supplier}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Status</td>
+                                    <td colspan="3">${span}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Payment Terms</td>
+                                    <td colspan="3">${ data.payment_method}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Added By</td>
+                                    <td>${ data.nameuser}</td>
+                                    <td>Added On</td>
+                                    <td>${ data.added_on}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        `
+                    );
+
+                },
+                error: function() {
+                    // Handle error if the data fetch fails
+                    $(".modal-body").html("Error loading data");
+                }
+
+            });
+
+            $.ajax({
+                url: "<?= site_url('purchase/getpurchaseitems/')?>" + pID,  // Replace with your actual data endpoint URL
+                method: "GET",
+                dataType: 'json',
+                success: function(data) {
+
+                    var tableHTML = "";
+                    var rv = 0;
+                    var wv = 0;
+                    var qty = 0;
+                    var subtotal = 0;
+                    $.each(data, function(index, item) {
+                        rv += parseInt(item.quantity * item.retail_price);
+                        wv += parseInt(item.quantity * item.wholesale_price);
+                        qty += parseInt(item.quantity);
+                        subtotal += parseInt(item.quantity * item.price);
+                        tableHTML += `
+                            <tr>
+                                <td class="align-middle text-center">${ item.quantity}</td>
+                                <td class="align-middle" style="width: 1%;">
+                                    
+                                </td>
+                                <td class="align-middle">${ item.name}</td>
+                                <td class="text-right align-middle">${ numberformat(item.price)}</td>
+                                <td class="text-right align-middle">₱ ${ numberformat(item.quantity * item.price)}</td>
+                            </tr>
+                        `;
+
+                    });
+
+                    $(".pitems").html(tableHTML);
+
+                    $(".fitems").html(`
+                        <tr>
+                            <td class="text-center">${qty}</td>
+                            <td class="text-right" colspan="3">Grand Total</td>
+                            <td class="text-right">₱ ${ numberformat(subtotal)}</td>
+                        </tr>
+                    `);
+
+                    $(".rvwv").html(`
+                        <div class="col-lg-6 tx-24">Retail Value:₱ ${ numberformat(rv)}</div>
+                        <div class="col-lg-6 tx-24">Wholesale Value:₱ ${ numberformat(wv)}</div>
+                    `);
+                },
+                error: function() {
+                    // Handle error if the data fetch fails
+                    $(".modal-body").html("Error loading data");
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+

@@ -243,8 +243,10 @@ $routes->get('/expense/view/(:any)', 'Accounting_controller::viewExpense/$1' ,['
 $routes->get('/expense/add/', 'Accounting_controller::addExpense' ,['filter' => 'auth']);
 $routes->get('/expense/edit/(:any)', 'Accounting_controller::editExpense/$1' ,['filter' => 'auth']);
 $routes->get('/expense/printvoucher/(:any)', 'Accounting_controller::printVoucher/$1' ,['filter' => 'auth']);
+$routes->get('/expense/expensecategory', 'Accounting_controller::expenseCategory' ,['filter' => 'auth']);
 $routes->post('/expense/save/', 'Accounting_controller::saveExpense' ,['filter' => 'auth']);
 $routes->post('/expense/saveexpensecategory/', 'Accounting_controller::saveExpenseCategory' ,['filter' => 'auth']);
+$routes->post('/expense/updateexpensecategory/(:any)', 'Accounting_controller::updateExpenseCategory/$1' ,['filter' => 'auth']);
 $routes->post('/expense/update/(:any)', 'Accounting_controller::updateExpense/$1' ,['filter' => 'auth']);
 $routes->post('/expense/markpending/(:any)', 'Accounting_controller::updateExpensePending/$1' ,['filter' => 'auth']);
 $routes->post('/expense/markverified/(:any)', 'Accounting_controller::updateExpenseVerified/$1' ,['filter' => 'auth']);
@@ -253,6 +255,9 @@ $routes->post('/expense/markcancelled/(:any)', 'Accounting_controller::updateExp
     Accounting: Payment Management
 */
 $routes->get('/payment/view/(:any)', 'Accounting_controller::viewPayment/$1' ,['filter' => 'auth']);
+$routes->get('/payment/add', 'Accounting_controller::addPayment' ,['filter' => 'auth']);
+$routes->post('/payment/save', 'Accounting_controller::savePayment' ,['filter' => 'auth']);
+
 
 /**
     Ajax Routes
@@ -268,6 +273,11 @@ $routes->get('/reservation/viewreservationdetails/(:any)', 'Ajax_controller::vie
 $routes->get('/reservation/viewreservationitems/(:any)', 'Ajax_controller::viewReservationItems/$1' ,['filter' => 'auth']);
 $routes->get('/stocktransfer/viewstdetails/(:any)', 'Ajax_controller::viewSTdetails/$1' ,['filter' => 'auth']);
 $routes->get('/stocktransfer/viewstitems/(:any)', 'Ajax_controller::viewSTitems/$1' ,['filter' => 'auth']);
+$routes->get('/payment/getpurchase/(:any)', 'Ajax_controller::getPurchase/$1' ,['filter' => 'auth']);
+$routes->get('/items/viewvariations/(:any)', 'Ajax_controller::viewVariations/$1' ,['filter' => 'auth']);
+$routes->get('/quotation/getquotationitem/(:any)', 'Ajax_controller::getQuotationItem/$1' ,['filter' => 'auth']);
+$routes->get('/purchase/getpurchasedetails/(:any)', 'Ajax_controller::getPurchaseDetails/$1' ,['filter' => 'auth']);
+$routes->get('/purchase/getpurchaseitems/(:any)', 'Ajax_controller::getPurchaseItems/$1' ,['filter' => 'auth']);
 
 /**
     API Routes

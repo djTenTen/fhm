@@ -124,6 +124,10 @@
 
 <script>
 
+    function numberformat(num){
+        return Number(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
     $(document).ready(function() {
         // When the button is clicked, show the modal and load the data
         $(".load-data").on("click", function() {
@@ -203,15 +207,15 @@
                             <tr>
                                 <td class="text-center"></td>
                                 <td class="text-right" colspan="3">Subtotal</td>
-                                <td class="text-right">${ data[0].subtotal }</td>
+                                <td class="text-right">₱ ${ numberformat(data[0].subtotal) }</td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="text-right">Delivery Fee</td>
-                                <td class="text-right">${ data[0].delivery_fee }</td>
+                                <td class="text-right">₱ ${ numberformat(data[0].delivery_fee) }</td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="text-right">Grand Total</td>
-                                <td class="text-right">${ data[0].grandtotal }</td>
+                                <td class="text-right">₱ ${ numberformat(data[0].grandtotal) }</td>
                             </tr>
                         `
                     );
@@ -242,8 +246,8 @@
                                     
                                 </td>
                                 <td class="align-middle">${item.name}</td>
-                                <td class="align-middle text-right">${item.price}</td>
-                                <td class="align-middle text-right">${item.sub_total}</td>
+                                <td class="align-middle text-right">${numberformat(item.price)}</td>
+                                <td class="align-middle text-right">${numberformat(item.sub_total)}</td>
                             </tr>
                         `;
 

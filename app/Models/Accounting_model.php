@@ -376,20 +376,19 @@ class Accounting_model extends  Model {
     public function viewPaymentSales($area){
 
         if($area == 'all'){
-            $query = $this->db->query("SELECT p.payment_id, p.type, p.name, pd.total as paid, p.status, u.name AS added_by, p.added_on
-            FROM ".$this->tblp." p LEFT JOIN 
-            (SELECT payment_id, SUM(amount) AS total ".$this->tblpd." WHERE status = 'verified' GROUP BY  payment_id) pd 
-            ON p.payment_id = pd.payment_id
-            LEFT JOIN ".$this->tblu." u ON p.added_by = u.user_id
+            $query = $this->db->query("SELECT p.payment_id, p.type, p.name, IFNULL(pd.total, 0) AS paid, p.status, u.name AS added_by, p.added_on 
+            FROM tbl_payment p
+            LEFT JOIN (SELECT payment_id, SUM(amount) AS total FROM tbl_payment_detail WHERE status = 'verified' GROUP BY payment_id) pd ON p.payment_id = pd.payment_id
+            LEFT JOIN tbl_user u ON p.added_by = u.user_id
             ORDER BY p.added_on DESC");
     
             return $query->getResultArray();
         }else{
-            $query = $this->db->query("SELECT p.payment_id, p.type, p.name, pd.total as paid, p.status, u.name AS added_by, p.added_on
-            FROM ".$this->tblp." p LEFT JOIN 
-            (SELECT payment_id, SUM(amount) AS total FROM ".$this->tblpd." WHERE status = 'verified' GROUP BY  payment_id) pd 
-            ON p.payment_id = pd.payment_id
-            LEFT JOIN ".$this->tblu." u ON p.added_by = u.user_id
+
+            $query = $this->db->query("SELECT p.payment_id, p.type, p.name, IFNULL(pd.total, 0) AS paid, p.status, u.name AS added_by, p.added_on 
+            FROM tbl_payment p
+            LEFT JOIN (SELECT payment_id, SUM(amount) AS total FROM tbl_payment_detail WHERE status = 'verified' GROUP BY payment_id) pd ON p.payment_id = pd.payment_id
+            LEFT JOIN tbl_user u ON p.added_by = u.user_id
             WHERE p.type = '$area'
             ORDER BY p.added_on DESC");
     
@@ -402,7 +401,7 @@ class Accounting_model extends  Model {
     public function paymentdue($pID,$area){
 
         $payment_due = 0;
-        $query1 = $this->db->query("SELECT * FROM ".$this->tblp." WHERE payment_id = $pID");
+        $query1 = $this->db->query("SELECT * FROM ".$this->tblpi." WHERE payment_id = $pID");
     
         foreach($query1->getResultArray() as $q1){
 
@@ -438,6 +437,82 @@ class Accounting_model extends  Model {
         }
 
         return $payment_due;
+        
+
+    }
+
+    public function savePayment(){
+
+        $payment = [
+            'name' => $this->request->getPost("name"),
+            'type' => $this->request->getPost("type"),
+            'status' => 'pending',
+            'added_by' => $this->encrypter->decrypt($_SESSION['userID']),
+            'added_on' => $this->date.' '.$this->time
+        ];
+
+        $this->db->table($this->tblp)->insert($payment);
+
+        $lastid = $this->db->query("select payment_id from ".$this->tblp." order by payment_id desc limit 1")->getRowArray();
+
+        foreach($_POST['id'] as $i => $key){
+
+            $payitem = [
+                'payment_id' => $lastid['payment_id'],
+                'id' => $_POST['id'][$i]
+            ];
+            $this->db->table($this->tblpi)->insert($payitem);
+
+        }
+
+        foreach($_POST['payment-amount'] as $i => $payment){
+
+            $paydate = $_POST['yy'][$i].'-'.$_POST['mm'][$i].'-'.$_POST['dd'][$i];
+
+            if($_POST['payment-method'][$i] == 'cash'){
+
+                $paydetail = [
+                    'payment_id' => $lastid['payment_id'],
+                    'date' => $paydate,
+                    'method' => $_POST['payment-method'][$i],
+                    'amount' => $_POST['payment-amount'][$i],
+                    'check_number' => '',
+                    'status' => 'verified',
+                    'added_by' => $this->encrypter->decrypt($_SESSION['userID']),
+                    'added_on' => $this->date.' '.$this->time,
+                    'verified_by' => $this->encrypter->decrypt($_SESSION['userID']),
+                    'verified_on' => $this->date.' '.$this->time
+                ];
+                $this->db->table($this->tblpd)->insert($paydetail);
+
+            }elseif($_POST['payment-method'][$i] == 'check'){
+                $paydetail = [
+                    'payment_id' => $lastid['payment_id'],
+                    'date' => $paydate,
+                    'method' => $_POST['payment-method'][$i],
+                    'amount' => $_POST['payment-amount'][$i],
+                    'check_number' => $_POST['payment-check-no'][$i],
+                    'status' => 'pending',
+                    'added_by' => $this->encrypter->decrypt($_SESSION['userID']),
+                    'added_on' => $this->date.' '.$this->time
+                ];
+                $this->db->table($this->tblpd)->insert($paydetail);
+
+            }else{
+                $paydetail = [
+                    'payment_id' => $lastid['payment_id'],
+                    'date' => $paydate,
+                    'method' => $_POST['payment-method'][$i],
+                    'amount' => $_POST['payment-amount'][$i],
+                    'check_number' => '',
+                    'status' => 'pending',
+                    'added_by' => $this->encrypter->decrypt($_SESSION['userID']),
+                    'added_on' => $this->date.' '.$this->time
+                ];
+                $this->db->table($this->tblpd)->insert($paydetail);
+            }
+
+        }
         
 
     }
@@ -498,6 +573,22 @@ class Accounting_model extends  Model {
         ];
 
         $this->db->table($this->tblec)->insert($data);
+
+    }
+
+
+    public function updateExpenseCategory($ecID){
+
+        $ecid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$ecID));
+        $data = [
+            'name' => $this->request->getPost("name"),
+            'parent' => $this->encrypter->decrypt($this->request->getPost("parent")),
+            'updated_by' => $this->encrypter->decrypt($_SESSION['userID']),
+            'updated_on' => $this->date.' '.$this->time
+        ];
+
+        $this->db->table($this->tblec)->where("expense_category_id", $ecid)->update($data);
+
 
     }
 

@@ -266,6 +266,29 @@ class Accounting_controller extends BaseController{
     }
 
 
+    public function addPayment(){
+
+        // main content
+        $page = 'addpayment';
+        $data['title'] = 'Payment Management';
+        
+        $data['paymentmethod'] = $this->system_model->getPaymentMethod();
+
+        echo view('includes/header', $data);
+        echo view('accounting/'.$page, $data);
+        echo view('includes/footer');
+
+    }
+
+    public function savePayment(){
+
+        $this->accounting_model->savePayment();
+        $_SESSION['payment_added'] = 'payment_added';
+        return redirect()->to(site_url('payment/add'));
+
+    }
+
+
 
 
 
@@ -328,6 +351,17 @@ class Accounting_controller extends BaseController{
         return redirect()->to(site_url('expense/expensecategory'));
 
     }
+
+
+    public function updateExpenseCategory($ecID){
+
+        $this->accounting_model->updateExpenseCategory($ecID);
+        $_SESSION['expensecategory_updated'] = 'expensecategory_updated';
+        return redirect()->to(site_url('expense/expensecategory'));
+
+    }
+
+    
 
 
 

@@ -103,20 +103,6 @@ class Item_model extends  Model {
 
 
 
-    /**
-        * @method getVariationItems() use to get the variation items information based on id
-        * @param iid decrypted data of item_id
-        * @return item->as->multiple_result
-    */
-    public function getVariationItems($iid){
-
-        $query = $this->db->query("select name,color,wholesale_price,retail_price,item_id
-        from ".$this->tbli."
-        where parent = $iid");
-        return $query->getResultArray();
-
-    }
-
 
     /**
         * @method getVariationCount() use to get the variation count items information based on id

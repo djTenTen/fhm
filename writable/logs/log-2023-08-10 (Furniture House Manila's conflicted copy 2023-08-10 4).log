@@ -1,0 +1,13 @@
+INFO - 2023-08-10 13:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 13:50:23 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Ajax_model.php(393): CodeIgniter\Model->__call('getsubtotal', [...])
+ 4 APPPATH\Controllers\Ajax_controller.php(187): App\Models\Ajax_model->viewReservationDetails('8a377d8e674887bfec012d8a5998366a4b8eb920f987f749c2bf976fQHCferRK1NcxPlpLU6oTolI=')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ajax_controller->viewReservationDetails('8a377d8e674887bfec012d8a5998366a4b8eb920f987f749c2bf976fQHCferRK1NcxPlpLU6oTolI=')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ajax_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 13:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 13:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -50,73 +50,11 @@
 				<td class="align-middle no-wrap">
 					<div class="btn-group">
 						<?php if(in_array('edit-sales', $arr)){?>
-							<button type="button" class="btn btn-success btn-icon btn-xs" data-toggle="modal" data-target="#modalview<?= $quo['quotation_id']; ?>"><i class="fas fa-eye"></i></button>
-							<a href="<?= site_url()?>quotation/edit/<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($quo['quotation_id']));?>" class="btn btn-icon btn-primary btn-xs"><i class="fas fa-edit"></i></a>
+							<button type="button" class="btn btn-success btn-icon btn-sm load-data" data-toggle="modal" data-target="#modalview" data-quotation-id="<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($quo['quotation_id'])); ?>"><i class="fas fa-eye"></i></button>
+							<a href="<?= site_url()?>quotation/edit/<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($quo['quotation_id']));?>" class="btn btn-icon btn-primary btn-sm"><i class="fas fa-edit"></i></a>
 						<?php }?>
 						
 					</div>
-
-					<!-- MODAL VIEW -->
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalview<?= $quo['quotation_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Quotation</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-
-									<table class="table table-hover" style="font-size: 14px;">
-										<thead>
-											<tr>
-												<th style="width: 10%;">Quantity</th>
-												<th colspan="2" style="width: 50%;">Item</th>
-												<th style="width: 15%;">Unit Price</th>
-												<th style="width: 15%;">Subtotal</th>
-											</tr>
-										</thead>
-										<tbody>
-										<?php 
-											$gtotal = 0;
-											foreach($sales_model->getQuotationItem(str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($quo['quotation_id']))) as $q){
-											$subtotal = 0;
-											$subtotal += $q['quantity'] * $q['price'];
-											$gtotal += $subtotal;
-										?>
-											<tr>
-												<td class="align-middle text-center"><?= $q['quantity'] ?></td>
-												<td class="align-middle" style="width: 1%;">
-
-												</td>
-												<td class="align-middle"><?= $q['name']; ?></td>
-												<td class="align-middle"><?= $q['price']; ?></td>
-												<td class="align-middle"><?= number_format($subtotal, 2); ?></td>
-									
-											</tr>
-										<?php } ?>
-										</tbody>
-										<tfoot>
-											<tr>
-												<td class="text-right" colspan="4">Grand Total</td>
-												<td data-name="grand-total"><?php echo number_format($gtotal, 2); ?></td>
-											</tr>
-										</tfoot>
-											
-									</table>
-                                    
-                                </div>
-                                <div class="modal-footer">
-									<a href="<?= site_url()?>quotation/printquotation/<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($quo['quotation_id']))?>" class="btn btn-info">Print Quotation</a>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END OF MODAL VIEW -->
-
 
 				</td>
 			</tr>
@@ -125,3 +63,113 @@
 	</table>
 
 </div>
+
+
+
+	<!-- MODAL VIEW -->
+	<!-- Modal -->
+	<div class="modal fade" id="modalview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Quotation</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<table class="table table-hover" style="font-size: 14px;">
+					<thead>
+						<tr>
+							<th style="width: 10%;">Quantity</th>
+							<th colspan="2" style="width: 50%;">Item</th>
+							<th style="width: 15%;">Unit Price</th>
+							<th style="width: 15%;">Subtotal</th>
+						</tr>
+					</thead>
+					<tbody class="qitem">
+
+							
+					</tbody>
+					<tfoot class="data-foot">
+						
+					</tfoot>
+						
+				</table>
+				
+			</div>
+			<div class="modal-footer">
+				<a id="printquotation" href="" class="btn btn-info" target="_blank">Print Quotation</a>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- END OF MODAL VIEW -->
+
+
+
+<script>
+
+    function numberformat(num){
+        return Number(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    $(document).ready(function() {
+        // When the button is clicked, show the modal and load the data
+        $(".load-data").on("click", function() {
+
+            var qID = $(this).data('quotation-id');
+
+			$('#printquotation').attr('href', "<?= site_url("quotation/printquotation/");?>" + qID);
+
+			$.ajax({
+                url: "<?= site_url('quotation/getquotationitem/')?>" + qID,  // Replace with your actual data endpoint URL
+                method: "GET",
+                dataType: 'json',
+                success: function(data) {
+
+					var tableHTML = "";
+					var gtotal = 0;
+                    $.each(data, function(index, item) {
+						gtotal += parseInt(item.subtotal);
+                        tableHTML += `
+							<tr>
+								<td class="align-middle text-center">${item.quantity}</td>
+								<td class="align-middle" style="width: 1%;">
+
+								</td>
+								<td class="align-middle">${item.name}</td>
+								<td class="align-middle">${item.price}</td>
+								<td class="align-middle">₱ ${numberformat(item.subtotal)}</td>
+					
+							</tr>
+                        `;
+
+                    });
+
+                    $(".qitem").html(tableHTML);
+                
+                    $(".data-foot").html(
+                        `
+						<tr>
+							<td class="text-right" colspan="4">Grand Total</td>
+							<td data-name="grand-total">₱ ${ numberformat(gtotal)}</td>
+						</tr>
+                        `
+                    );
+
+                },
+                error: function() {
+                    // Handle error if the data fetch fails
+                    $(".modal-body").html("Error loading data");
+                }
+
+            });
+            
+        });
+
+    });
+
+</script>

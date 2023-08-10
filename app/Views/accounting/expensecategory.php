@@ -26,7 +26,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4"></h4>
 
-                    <?= form_open('expense/save');?>
+                    <?= form_open('expense/saveexpensecategory');?>
                         
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label">Name</label>
@@ -71,9 +71,55 @@
                                 <td class="align-middle"><?= $cate['name'];?></td>
                                 <td class="align-middle"></td>
                                 <td class="align-middle">
-                                    <div class="no-wrap">
-                                        <a href="" class="btn btn-icon btn-primary btn-xs"><i class="fas fa-edit"></i></a>
-                                        <a href=""><i class="fas fa-times"></i></a>
+                                    <div class="btn-group">
+
+                                        <button type="button" class="btn btn-primary btn-icon btn-sm" data-toggle="modal" data-target="#modaledit<?= $cate['expense_category_id']; ?>"><i class="fas fa-edit"></i></button>
+                                        <!-- MODAL EDIT -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="modaledit<?= $cate['expense_category_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Edit <?= $cate['name'];?></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                
+                                                    <?= form_open('expense/updateexpensecategory/'.str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($cate['expense_category_id'])));?>
+                                                    
+                                                        <div class="form-group row">
+                                                            <label class="col-md-2 col-form-label">Name</label>
+                                                            <div class="col-md-10">
+                                                                <input class="form-control" type="text" name="name" value="<?= $cate['name'];?>" required>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="col-md-2 col-form-label">Parent</label>
+                                                            <div class="col-md-10">
+                                                                <select name="parent" class="custom-select" required>
+                                                                    <option value="<?= $encrypter->encrypt(0)?>">Select Parent Category</option>
+                                                                    <?php foreach($parentcategory as $pcate){?>
+                                                                        <option value="<?= $encrypter->encrypt($pcate['expense_category_id'])?>"><?= $pcate['name']?></option>
+                                                                    <?php }?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    
+                                                <div class="modal-footer">
+
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </form>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END OF MODAL EDIT -->
+
                                     </div>
                                 </td>
                             </tr>
@@ -82,13 +128,63 @@
                                 <td class="align-middle"> ― <?= $chcate['name'];?></td>
                                 <td class="align-middle"></td>
                                 <td class="align-middle">
-                                    <div class="no-wrap">
-                                        <a href=""><i class="fas fa-edit"></i></a>
-                                        <a href="" class="confirm-link btn btn-icon btn-danger btn-xs"><i class="fas fa-times"></i></a>
+                                    <div class="btn-group">
+                                        
+                                        <button type="button" class="btn btn-primary btn-icon btn-sm" data-toggle="modal" data-target="#modaledit<?= $chcate['expense_category_id']; ?>"><i class="fas fa-edit"></i></button>
+                                        <!-- MODAL EDIT -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="modaledit<?= $chcate['expense_category_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Edit <?= $chcate['name'];?></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                
+                                                    <?= form_open('expense/updateexpensecategory/'.str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($chcate['expense_category_id'])));?>
+                                                    
+                                                        <div class="form-group row">
+                                                            <label class="col-md-2 col-form-label">Name</label>
+                                                            <div class="col-md-10">
+                                                                <input class="form-control" type="text" name="name" value="<?= $chcate['name'];?>" required>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="col-md-2 col-form-label">Parent</label>
+                                                            <div class="col-md-10">
+                                                                <select name="parent" class="custom-select" required>
+                                                                    <option value="<?= $encrypter->encrypt($chcate['parent'])?>">Select Parent Category</option>
+                                                                    <?php foreach($parentcategory as $pcate){?>
+                                                                        <option value="<?= $encrypter->encrypt($pcate['expense_category_id'])?>"><?= $pcate['name']?></option>
+                                                                    <?php }?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    
+                                                <div class="modal-footer">
+
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </form>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END OF MODAL EDIT -->
+
                                     </div>
                                 </td>
                             </tr>
                             <?php }?>
+
+                            
+
+
                         <?php }?>
                     </tbody>
                 </table>

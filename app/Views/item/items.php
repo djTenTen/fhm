@@ -41,59 +41,12 @@
                     <td><?= $count['varcount'];?></td>       
                     <td><span class="badge badge-<?php if($ai['itemstatus'] == 'active'){ echo 'success'; } else { echo 'danger'; } ?>"><?= ucwords($ai['itemstatus']); ?></span></td>
                     <td>
-                        <!-- THIS IS THE BUTTON AREA WHERE IT CAN DISPLAY ALL THE VARIATIONS PER ITEM AND REDIRECT TO THE EDITING ITEM PAGE -->
                         <div class="btn-group">
                             <?php if(in_array('edit-item', $arr)){?>
-                                <button type="button" class="btn btn-success btn-icon btn-sm" data-toggle="modal" data-target="#modalview<?= $ai['item_id']; ?>"><i class="fas fa-eye"></i></button>
+                                <button type="button" class="btn btn-success btn-icon btn-sm load-data" data-toggle="modal" data-target="#modalview" data-item-id="<?= str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ai['item_id'])); ?>"><i class="fas fa-eye"></i></button>
                                 <a href="<?= site_url().'item/edit/'.str_ireplace(['/','+'],['~','$'],$encrypter->encrypt($ai['item_id'])); ?>" class="btn btn-primary btn-icon btn-sm"><i class="fas fa-edit"></i></a>
                             <?php }?>
                         </div>
-                        
-                        <!-- MODAL VIEW -->
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalview<?= $ai['item_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Variations of <?= $ai['itemname'];?></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <table class="table table-hover table-sm">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Name</th>
-                                                <th>Color</th>
-                                                <th>Wholesale Price</th>
-                                                <th>Retail Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- DISPLAY OF VARIATIONS ITEM ON THE MODAL PER PARENT ITEM-->
-                                            <?php foreach($item_model->getVariationItems($ai['item_id']) as $vars){?>
-                                                <tr>
-                                                    <td><?= $vars['item_id'];?></td>
-                                                    <td><?= $vars['name'];?></td>
-                                                    <td><?= $vars['color'];?></td>
-                                                    <td><?= $vars['wholesale_price'];?></td>
-                                                    <td><?= $vars['retail_price'];?></td>
-                                                </tr>
-                                            <?php }?>
-                                        </tbody>
-                                    </table>          
-                                    
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END OF MODAL VIEW -->
-
                     </td>
                 </tr>
             <?php }?>
@@ -103,3 +56,87 @@
    
 
 </div>
+
+
+<!-- MODAL VIEW -->
+<!-- Modal -->
+<div class="modal fade" id="modalview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Variations</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Color</th>
+                        <th>Wholesale Price</th>
+                        <th>Retail Price</th>
+                    </tr>
+                </thead>
+                <tbody class="tbitem">
+
+                </tbody>
+            </table>          
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- END OF MODAL VIEW -->
+
+
+
+<script>
+
+    $(document).ready(function() {
+        // When the button is clicked, show the modal and load the data
+        $(".load-data").on("click", function() {
+            // Show the modal
+            var iID = $(this).data('item-id');
+            // Fetch data using AJAX
+
+			$.ajax({
+                url: "<?= site_url('items/viewvariations/')?>" + iID,  // Replace with your actual data endpoint URL
+                method: "GET",
+                dataType: 'json',
+                success: function(data) {
+
+					var tblitem = "";
+					$.each(data, function(index, item) {
+
+                        tblitem += `
+                        <tr>
+                            <td>${item.item_id}</td>
+                            <td>${item.name}</td>
+                            <td>${item.color}</td>
+                            <td>${item.wholesale_price}</td>
+                            <td>${item.retail_price}</td>
+                        </tr>
+                        `;
+                    });
+
+                    $(".tbitem").html(tblitem);
+
+                },
+                error: function() {
+                    // Handle error if the data fetch fails
+                    $(".tbitem").html("Error loading data");
+                }
+
+            });
+
+        });
+
+    });
+
+</script>

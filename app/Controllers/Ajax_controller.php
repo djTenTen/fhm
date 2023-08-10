@@ -55,6 +55,11 @@ class Ajax_controller extends BaseController{
 
     }
 
+    public function viewVariations($iID){
+
+        return $this->ajax_model->viewVariations($iID);
+
+    }
 
 
 
@@ -198,6 +203,89 @@ class Ajax_controller extends BaseController{
 
 
 
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Quotation Module area
+        ----------------------------------------------------------
+        * @return reservation data
+    */
+    public function getQuotationItem($qID){
+
+        return $this->ajax_model->getQuotationItem($qID);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Purchase Module area
+        ----------------------------------------------------------
+        * @return reservation data
+    */
+    public function getPurchaseDetails($pID){
+
+        return $this->ajax_model->getPurchaseDetails($pID);
+
+    }
+
+    public function getPurchaseItems($pID){
+
+        return $this->ajax_model->getPurchaseItems($pID);
+
+    }
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
     /**
         ----------------------------------------------------------
         Stock Module area
@@ -216,6 +304,39 @@ class Ajax_controller extends BaseController{
     public function viewSTitems($stID){
         $this->ajax_model->viewSTitems($stID);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Payment Module area
+        ----------------------------------------------------------
+        * @return purchase data
+    */
+    public function getPurchase($type){
+        $this->ajax_model->getPurchase($type);
+    }
+
+
+    
+    
 
 
 }

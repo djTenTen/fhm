@@ -38,7 +38,7 @@ class Ajax_model extends  Model {
     protected $tblri = "tbl_reservation_item";
     protected $tblwh = "tbl_warehouse";
     protected $tblst = "tbl_stock_transfer";
-
+    protected $tbli = "tbl_item";
 
     /**
         * @method func __construct() is being executed automatically when this file is loaded
@@ -58,7 +58,7 @@ class Ajax_model extends  Model {
 
     /**
         ----------------------------------------------------------
-        Login Module area
+        Item Module area
         ----------------------------------------------------------
         AJAX FUNCTION get items on the input/auto search
         * @return items->json_encoded data
@@ -92,6 +92,37 @@ class Ajax_model extends  Model {
 
             array_push($item, $data);
         }
+        echo json_encode($item);
+
+    }
+
+    /**
+        * @method getVariationItems() use to get the variation items information based on id
+        * @param iid decrypted data of item_id
+        * @return item->as->multiple_result
+    */
+    public function viewVariations($iID){
+
+        $iid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$iID));
+
+        $query = $this->db->query("select name,color,wholesale_price,retail_price,item_id
+        from ".$this->tbli."
+        where parent = $iid");
+
+        $item = array();
+        foreach($query->getResultArray() as $row){
+
+            $data = array(
+                'name' => $row['name'],
+                'color' => $row['color'],
+                'wholesale_price' => $row['wholesale_price'],
+                'retail_price' => $row['retail_price'],
+                'item_id' => $row['item_id']
+            );
+
+            array_push($item, $data);
+        }
+
         echo json_encode($item);
 
     }
@@ -384,6 +415,13 @@ class Ajax_model extends  Model {
 
     }
 
+    public function getsubtotal($rid){
+
+        $query = $this->db->query("select sum(quantity * price) as subtotal from ".$this->tblri." where reservation_id = $rid");
+        return $query->getRowArray();
+
+    }
+
     /**
         * @method viewReservationDetails() is to get the reservation item information based on id
         * @param rID encrypted data of reservation_id
@@ -435,6 +473,44 @@ class Ajax_model extends  Model {
 
 
 
+    /**
+        ----------------------------------------------------------
+        Quotation Module area
+        ----------------------------------------------------------
+        * @method getQuotationItem() use to get the quotation item information based on id
+        * @param qID encrypted data of quotation_id
+        * @var qid decrypted data of quotation_id
+        * @return item->as->single_result
+    */
+    public function getQuotationItem($qID){
+
+        $qid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'], $qID));
+
+        $query = $this->db->query("SELECT tqi.quotation_item_id, tqi.quantity, item.parent_id, item.item_id, item.name, tqi.price, (tqi.quantity * tqi.price) as subtotal 
+        FROM tbl_quotation_item tqi
+        INNER JOIN (SELECT parent.item_id as parent_id, tbl_item.item_id, CONCAT(parent.name, ' - ', tbl_item.name) as name 
+        FROM tbl_item INNER JOIN (SELECT tbl_item.item_id, tbl_item.name FROM tbl_item) parent ON tbl_item.parent = parent.item_id 
+        WHERE tbl_item.parent != '0') item ON tqi.item_id = item.item_id WHERE tqi.quotation_id = $qid");
+
+        $arr = [];
+        foreach($query->getResultArray() as $row){
+
+            $data = [
+                'quotation_item_id' => $row['quotation_item_id'],
+                'quantity' => $row['quantity'],
+                'subtotal' => $row['subtotal'],
+                'parent_id' => $row['parent_id'],
+                'item_id' => $row['item_id'],
+                'name' => $row['name'],
+                'price' => $row['price']
+            ];
+
+            array_push($arr, $data);
+        }
+
+        echo json_encode($arr);
+
+    }
 
 
 
@@ -442,7 +518,80 @@ class Ajax_model extends  Model {
 
 
 
+     /**
+        ----------------------------------------------------------
+        Purchase Module area
+        ----------------------------------------------------------
 
+    */
+    public function getPurchaseDetails($pID){
+
+        $pid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'], $pID));
+
+        $query = $this->db->query("select *,ts.name as supplier,tp.status,tu.name as nameuser, wh.name as warehouse
+        from tbl_supplier as ts,tbl_purchase as tp, tbl_user as tu, tbl_warehouse as wh
+        where ts.supplier_id = tp.supplier_id
+        and tp.warehouse_id = wh.warehouse_id
+        and tp.added_by = tu.user_id
+        and tp.purchase_id = $pid");
+
+        $row = $query->getRowArray();
+
+        $data = [
+            'supplier' => $row['supplier'],
+            'status' => $row['status'],
+            'nameuser' => $row['nameuser'],
+            'warehouse' => $row['warehouse'],
+            'purchase_id' => $row['purchase_id'],
+            'invoice_no' => $row['invoice_no'],
+            'invoice_date' => $row['invoice_date'],
+            'payment_method' => ucwords(str_replace("-", " ", $row['payment_method'])),
+            'added_on' => $row['added_on']
+        ];
+
+        echo json_encode($data);
+
+    }
+
+    /**
+        * @method getPurchaseItems() use to get the information of purchase items based on id
+        * @param pID = decrypted data of purchase_id
+        * @return purchase->as->multiple_result
+    */
+    public function getPurchaseItems($pID){
+
+        $pid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'], $pID));
+
+        $query = $this->db->query("SELECT pi.purchase_item_id, pi.quantity, i.parent_id, i.item_id, i.name, pi.price, i.retail_price, i.wholesale_price
+        FROM tbl_purchase_item pi
+        INNER JOIN (
+            SELECT parent.item_id AS parent_id, ti.item_id, CONCAT(parent.name, ' - ', ti.name) AS name, ti.retail_price, ti.wholesale_price
+            FROM tbl_item ti
+            INNER JOIN tbl_item parent ON ti.parent = parent.item_id
+            WHERE ti.parent != '0'
+        ) AS i ON pi.item_id = i.item_id
+        WHERE pi.purchase_id = $pid");
+
+        $arr = [];
+        foreach($query->getResultArray() as $row){
+
+            $data = [
+                'purchase_item_id' => $row['purchase_item_id'],
+                'quantity' => $row['quantity'],
+                'parent_id' => $row['parent_id'],
+                'item_id' => $row['item_id'],
+                'name' => $row['name'],
+                'price' => $row['price'],
+                'retail_price' => $row['retail_price'],
+                'wholesale_price' => $row['wholesale_price']
+            ];
+            array_push($arr, $data);
+
+        }
+
+        echo json_encode($arr);
+
+    }
 
 
 
@@ -521,6 +670,73 @@ class Ajax_model extends  Model {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Payment Module area
+        ----------------------------------------------------------
+   
+    */
+    public function getPurchase($type){
+
+        if($type == 'purchase'){
+            $query = $this->db->query("SELECT p.purchase_id AS id, p.invoice_no, s.name, p.invoice_date AS date, IFNULL(pi.total, 0) AS total 
+            FROM tbl_purchase p
+            INNER JOIN tbl_supplier s ON p.supplier_id = s.supplier_id
+            LEFT JOIN (SELECT purchase_id, SUM(quantity * price) AS total FROM tbl_purchase_item GROUP BY purchase_id) pi ON p.purchase_id = pi.purchase_id
+            WHERE p.payment_status = 'unpaid' 
+            AND p.status IN ('pending', 'delivered')
+            ORDER BY date DESC");
+        }elseif($type == 'sales'){
+            $query = $this->db->query("SELECT s.sales_id AS id, s.invoice_no, c.name, s.invoice_date AS date, IFNULL(si.total, 0) AS total 
+            FROM tbl_sales s
+            INNER JOIN tbl_customer c ON s.customer_id = c.customer_id
+            LEFT JOIN (SELECT sales_id, SUM(quantity * price) AS total FROM tbl_sales_item GROUP BY sales_id) si ON s.sales_id = si.sales_id
+            WHERE s.payment_status = 'unpaid' 
+            AND s.status IN ('pending', 'delivered')
+            ORDER BY date DESC");
+        }
+        
+        $arr =[];
+        foreach($query->getResultArray() as $row){
+
+            $data = [
+                'id' => $row['id'],
+                'invoice_no' => $row['invoice_no'],
+                'name' => $row['name'],
+                'date' => date_format(date_create($row['date']),"M. d, Y"),
+                'total' => $row['total']
+            ];
+
+            array_push($arr, $data);
+
+        }
+
+        echo json_encode($arr);
+        
+    }
 
 
 
