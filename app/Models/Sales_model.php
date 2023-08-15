@@ -70,20 +70,20 @@ class Sales_model extends  Model {
 
         if($stats == 'all'){
             $query = $this->db->query("select ts.* , wh.name as warehouse, tc.name as customer, tu.name as nameuser
-            from ".$this->tbls." as ts, ".$this->tblwh." as wh, ".$this->tblc." as tc, ".$this->tblu." as tu
-            where ts.warehouse_id = wh.warehouse_id
-            and ts.customer_id = tc.customer_id
-            and channel is null
-            and ts.added_by = tu.user_id");
+                from ".$this->tbls." as ts, ".$this->tblwh." as wh, ".$this->tblc." as tc, ".$this->tblu." as tu
+                where ts.warehouse_id = wh.warehouse_id
+                and ts.customer_id = tc.customer_id
+                and channel is null
+                and ts.added_by = tu.user_id");
             return $query->getResultArray();
         }else{
             $query = $this->db->query("select ts.* , wh.name as warehouse, tc.name as customer, tu.name as nameuser
-            from ".$this->tbls." as ts, ".$this->tblwh." as wh, ".$this->tblc." as tc, ".$this->tblu." as tu
-            where ts.warehouse_id = wh.warehouse_id
-            and ts.customer_id = tc.customer_id
-            and ts.added_by = tu.user_id
-            and channel is null
-            and ts.status = '$stats'
+                from ".$this->tbls." as ts, ".$this->tblwh." as wh, ".$this->tblc." as tc, ".$this->tblu." as tu
+                where ts.warehouse_id = wh.warehouse_id
+                and ts.customer_id = tc.customer_id
+                and ts.added_by = tu.user_id
+                and channel is null
+                and ts.status = '$stats'
         ");
             return $query->getResultArray();
         }

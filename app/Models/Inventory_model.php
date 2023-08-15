@@ -201,7 +201,12 @@ class Inventory_model extends  Model {
     */
     public function getwarehousename($wid){
 
-        $query = $this->db->query("select name from ".$this->tblwh." where warehouse_id = $wid");
+
+        $query = $this->db->table($this->tblwh)
+                    ->select('name')
+                    ->where('warehouse_id', $wid)
+                    ->get();
+                    
         return $query->getRowArray();
 
     }

@@ -107,8 +107,6 @@
                 </tbody>
             </table>
 
-            
-
         </div>
         <!-- END OF 2ND TAB -->
     </div>
@@ -119,143 +117,142 @@
 
         
 
-        <!-- MODAL EDIT -->
-        <!-- Modal -->
-        <div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit supplier</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <form id="myform" action="" method="post">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Name</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control name" type="text" name="name" value="" required>
-                                    </div>
-                                </div>
+<!-- MODAL EDIT -->
+<!-- Modal -->
+<div class="modal fade" id="modaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit supplier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="myform" action="" method="post">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Name</label>
+                            <div class="col-md-8">
+                                <input class="form-control name" type="text" name="name" value="" required>
                             </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Address</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control address" type="text" name="address" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Contact Number</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control contact-number" type="text" name="contact-number" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Contact Person</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control contact-person" type="text" name="contact-person" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Position</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control position" type="text" name="position" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label">Remarks</label>
-                                    <div class="col-md-8">
-                                        <input class="form-control remarks" type="text" name="remarks" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Status</label>
-                                    <div class="custom-control custom-switch">
-                                        <input value="inactive" name="status" class="custom-control-label sti" type="hidden" id="" />
-                                        <input value="active" name="status" type="checkbox" class="custom-control-input sta" id="customSwitch">
-                                        <label class="custom-control-label" for="customSwitch">Inactive / Active</label>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                        
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                        </form>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Address</label>
+                            <div class="col-md-8">
+                                <input class="form-control address" type="text" name="address" value="">
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Contact Number</label>
+                            <div class="col-md-8">
+                                <input class="form-control contact-number" type="text" name="contact-number" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Contact Person</label>
+                            <div class="col-md-8">
+                                <input class="form-control contact-person" type="text" name="contact-person" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Position</label>
+                            <div class="col-md-8">
+                                <input class="form-control position" type="text" name="position" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Remarks</label>
+                            <div class="col-md-8">
+                                <input class="form-control remarks" type="text" name="remarks" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Status</label>
+                            <div class="custom-control custom-switch">
+                                <input value="inactive" name="status" class="custom-control-label sti" type="hidden" id="" />
+                                <input value="active" name="status" type="checkbox" class="custom-control-input sta" id="customSwitch">
+                                <label class="custom-control-label" for="customSwitch">Inactive / Active</label>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
-        <!-- END OF MODAL EDIT -->
+    </div>
+</div>
+<!-- END OF MODAL EDIT -->
 
+<script>
 
-        <script>
+    $(document).ready(function() {
+        // When the button is clicked, show the modal and load the data
+        $(".load-data").on("click", function() {
+            // Show the modal
+            var suppID = $(this).data('supplier-id');
+            // Fetch data using AJAX
 
-            $(document).ready(function() {
-                // When the button is clicked, show the modal and load the data
-                $(".load-data").on("click", function() {
-                    // Show the modal
-                    var suppID = $(this).data('supplier-id');
-                    // Fetch data using AJAX
+            $.ajax({
+                url: "<?= site_url('supplier/edit/')?>" + suppID,  // Replace with your actual data endpoint URL
+                method: "GET",
+                dataType: 'json',
+                success: function(data) {
+                
+                    // Populate the modal body with the fetched data
+                    $(".name").val(data.name);
+                    $(".address").val(data.address);
+                    $(".contact-number").val(data.contact_number);
+                    $(".contact-person").val(data.contact_person);
+                    $(".position").val(data.position);
+                    $(".remarks").val(data.remarks);
 
-                    $.ajax({
-                        url: "<?= site_url('supplier/edit/')?>" + suppID,  // Replace with your actual data endpoint URL
-                        method: "GET",
-                        dataType: 'json',
-                        success: function(data) {
-                     
-                            // Populate the modal body with the fetched data
-                            $(".name").val(data[0].name);
-                            $(".address").val(data[0].address);
-                            $(".contact-number").val(data[0].contact_number);
-                            $(".contact-person").val(data[0].contact_person);
-                            $(".position").val(data[0].position);
-                            $(".remarks").val(data[0].remarks);
+                    $('#myform').attr('action', "<?= site_url("supplier/update/");?>" + data.supplier_id_e);
 
-                            $('#myform').attr('action', "<?= site_url("supplier/update/");?>" + data[0].supplier_id_e);
+                    if(data.status == 'active'){
+                        $(".sta").prop('checked', true);
+                    }else{
+                        $(".sti").prop('checked', true);
+                    }
 
-                            if(data[0].status == 'active'){
-                                $(".sta").prop('checked', true);
-                            }else{
-                                $(".sti").prop('checked', true);
-                            }
-
-                        },
-                        error: function() {
-                            // Handle error if the data fetch fails
-                            $(".modal-body").html("Error loading data");
-                        }
-                    });
-
-                });
-
+                },
+                error: function() {
+                    // Handle error if the data fetch fails
+                    $(".modal-body").html("Error loading data");
+                }
             });
 
-        </script>
+        });
+
+    });
+
+</script>
 
 
 

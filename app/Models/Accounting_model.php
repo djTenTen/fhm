@@ -94,6 +94,7 @@ class Accounting_model extends  Model {
     }
 
 
+
     /**
         * @method viewExpense() use to get expense information based on id
         * @param eID decrypted data of expense_id
@@ -114,6 +115,7 @@ class Accounting_model extends  Model {
         return $query->getRowArray();
 
     }
+
 
 
     /**
@@ -407,26 +409,26 @@ class Accounting_model extends  Model {
 
             if($area == 'purchase'){
 
-                $query2 = $this->db->query("SELECT p.purchase_id, COALESCE(pi.subtotal, 0) as total
-                FROM ".$this->tblp." p
-                LEFT JOIN (SELECT purchase_id, SUM(quantity * price) AS subtotal FROM tbl_purchase_item GROUP BY purchase_id) 
-                pi ON p.purchase_id = pi.purchase_id
-                WHERE p.purchase_id = ".$q1['id']." ");
+                $query2 = $this->db->query("SELECT p.purchase_id, COALESCE(pi.subtotal, 0) AS total 
+                    FROM tbl_purchase p
+                    LEFT JOIN (SELECT purchase_id, SUM(quantity * price) AS subtotal FROM tbl_purchase_item GROUP BY purchase_id) pi 
+                    ON p.purchase_id = pi.purchase_id
+                    WHERE p.purchase_id = '".$q1['id']."'");
 
             }elseif($area == 'sales'){
 
                 $query2 = $this->db->query("SELECT s.sales_id, COALESCE((s.delivery_fee + si.subtotal), 0) AS total
-                FROM  tbl_sales s
-                LEFT JOIN ( SELECT sales_id, SUM(quantity * price) AS subtotal FROM tbl_sales_item GROUP BY sales_id) 
-                si ON s.sales_id = si.sales_id
-                WHERE s.sales_id = ".$q1['id']." ");
+                    FROM  tbl_sales s
+                    LEFT JOIN ( SELECT sales_id, SUM(quantity * price) AS subtotal FROM tbl_sales_item GROUP BY sales_id) si 
+                    ON s.sales_id = si.sales_id
+                    WHERE s.sales_id = ".$q1['id']." ");
 
             }elseif($area == 'expense'){
 
-                $query2 = $this->db->query("SELECT e.expense_id, COALESCE(ei.subtotal, 0) as total FROM 
-                tbl_expense e LEFT JOIN (SELECT expense_id, SUM(amount) AS subtotal FROM tbl_expense_item GROUP BY expense_id)
-                ei ON e.expense_id = ei.expense_id
-                WHERE e.expense_id = ".$q1['id']." ");
+                $query2 = $this->db->query("SELECT e.expense_id, COALESCE(ei.subtotal, 0) as total 
+                    FROM tbl_expense e LEFT JOIN (SELECT expense_id, SUM(amount) AS subtotal FROM tbl_expense_item GROUP BY expense_id) ei 
+                    ON e.expense_id = ei.expense_id
+                    WHERE e.expense_id = ".$q1['id']." ");
 
             }
 

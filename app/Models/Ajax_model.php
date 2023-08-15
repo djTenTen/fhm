@@ -12,12 +12,14 @@ class Ajax_model extends  Model {
     
     /** 
         Properties being used on this file
+        * @property inventory_model for the call of inventory model
         * @property db for the call of database
         * @property request for the post function method
         * @property encrypter for the encryption/decryption method
         * @property time for the current internet time Asia/Singapore based
         * @property date for the current internet date Asia/Singapore based
     */
+    protected $inventory_model;
     protected $db;
     protected $request;
     protected $encrypter;
@@ -38,7 +40,23 @@ class Ajax_model extends  Model {
     protected $tblri = "tbl_reservation_item";
     protected $tblwh = "tbl_warehouse";
     protected $tblst = "tbl_stock_transfer";
+    protected $tblsti = "tbl_stock_transfer_item";
     protected $tbli = "tbl_item";
+    protected $tble = "tbl_expense";
+    protected $tblei = "tbl_expense_item";
+    protected $tblec = "tbl_expense_category";
+    protected $tblp = "tbl_payment";
+    protected $tblpd = "tbl_payment_detail";
+    protected $tblpi = "tbl_payment_item";
+    protected $tblba = "tbl_bank_account";
+    protected $tblsl = "tbl_sales";
+    protected $tblsli = "tbl_sales_item";
+    protected $tblpc = "tbl_purchase";
+    protected $tblpci = "tbl_purchase_item";
+    protected $tblq = "tbl_quotation";
+    protected $tblqi = "tbl_quotation_item";
+
+
 
     /**
         * @method func __construct() is being executed automatically when this file is loaded
@@ -49,6 +67,7 @@ class Ajax_model extends  Model {
         $this->db = \Config\Database::connect('default'); 
         $this->request = \Config\Services::request();
         $this->encrypter = \Config\Services::encrypter(); 
+        $this->inventory_model = new \App\Models\Inventory_model; // to access the inventory_model
         date_default_timezone_set("Asia/Singapore"); 
         $this->time = date("H:i:s"); 
         $this->date = date("Y-m-d");
@@ -109,21 +128,7 @@ class Ajax_model extends  Model {
         from ".$this->tbli."
         where parent = $iid");
 
-        $item = array();
-        foreach($query->getResultArray() as $row){
-
-            $data = array(
-                'name' => $row['name'],
-                'color' => $row['color'],
-                'wholesale_price' => $row['wholesale_price'],
-                'retail_price' => $row['retail_price'],
-                'item_id' => $row['item_id']
-            );
-
-            array_push($item, $data);
-        }
-
-        echo json_encode($item);
+        echo json_encode($query->getResultArray());
 
     }
 
@@ -141,6 +146,7 @@ class Ajax_model extends  Model {
         AJAX FUNCTION get customers on the input/auto search
         * @return customers->json_encoded data
     */
+
     public function getCustomers(){
 
         $searchTerm = $_GET['term'];
@@ -174,6 +180,7 @@ class Ajax_model extends  Model {
         $cid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$cID));
 
         $query = $this->db->query("select * from ".$this->tblc." where customer_id = $cid");
+
         $arr = [];
         foreach($query->getResultArray() as $row){
 
@@ -253,31 +260,27 @@ class Ajax_model extends  Model {
 
     }
 
+
     public function editSupplier($sID){
 
         $sid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$sID));
 
         $query = $this->db->query("select * from ".$this->tbls." where supplier_id = $sid");
-        $arr = [];
-        foreach($query->getResultArray() as $row){
 
-            $data = [
-                'supplier_id_e' => $sID,
-                'supplier_id' => $row['supplier_id'],
-                'name' => $row['name'],
-                'address' => $row['address'],
-                'contact_number' => $row['contact_number'],
-                'contact_person' => $row['contact_person'],
-                'position' => $row['position'],
-                'remarks' => $row['remarks'],
-                'status' => $row['status'],
-            ];
-            array_push($arr, $data);
-            
-        }
+        $row = $query->getRowArray();
+        $data = [
+            'supplier_id_e' => $sID,
+            'supplier_id' => $row['supplier_id'],
+            'name' => $row['name'],
+            'address' => $row['address'],
+            'contact_number' => $row['contact_number'],
+            'contact_person' => $row['contact_person'],
+            'position' => $row['position'],
+            'remarks' => $row['remarks'],
+            'status' => $row['status'],
+        ];
 
-
-        echo json_encode($arr);
+        echo json_encode($data);
 
     }
 
@@ -346,6 +349,7 @@ class Ajax_model extends  Model {
     public function validateUsername($username){
 
         $query = "select username from ".$this->tblu." where username = ? limit 1";
+
         $res = $this->db->query($query, array($username));
         if($res->getNumRows() > 0){ 
             return true;
@@ -354,6 +358,179 @@ class Ajax_model extends  Model {
         }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Expense Module area
+        ----------------------------------------------------------
+        * @method viewExpense() use to get expense information based on id
+        * @param eID decrypted data of expense_id
+        * @return expense->as->single_result
+    */
+    public function viewExpenseDetails($eID){
+
+        $eid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID));
+
+        $query = $this->db->query("SELECT e.remarks,e.expense_id,e.date,e.name,SUM(i.amount) AS total,e.status,u.added_by,e.added_on,u.name AS nameuser
+            FROM ".$this->tble." e
+            LEFT JOIN ".$this->tblei." i ON e.expense_id = i.expense_id
+            INNER JOIN ".$this->tblu." u ON e.added_by = u.user_id
+            GROUP BY e.expense_id
+            ORDER BY e.added_on DESC");
+
+        echo json_encode($query->getRowArray());
+
+    }
+
+    /**
+        * @method getSummaryExpense() use to get summary expense information based on id
+        * @param eID decrypted data of expense_id
+        * @return expense->as->multiple_result
+    */
+    public function viewExpenseSummary($eID){
+
+        $eid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID));
+
+        $query = $this->db->query("SELECT ei.expense_item_id,ec.name AS category,ei.description,ei.amount,ei.expense_category_id
+            FROM ".$this->tblei." ei
+            INNER JOIN ".$this->tblec." ec ON ei.expense_category_id = ec.expense_category_id
+            WHERE ei.expense_id = '$eID'");
+
+        echo json_encode($query->getResultArray());
+
+    }
+
+
+    /**
+        * @method paymentHistory() use to get history payment  information based on expense_id
+        * @param eID decrypted data of expense_id
+        * @return payment_history->as->multiple_result
+    */
+    public function viewpaymentHistory($eID){
+
+        $eid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$eID));
+
+        $query = $this->db->query(" SELECT pd.payment_id,pd.payment_detail_id,pd.bank_account_id,pd.date,pd.method,CONCAT(ba.name, ' (', ba.account_number, ')') AS bank_account,pd.check_payee,pd.check_number,pd.amount,pd.status
+            FROM ".$this->tblpd." pd
+            INNER JOIN 
+            (SELECT p.payment_id 
+            FROM ".$this->tblp." p INNER JOIN ".$this->tblpi." pi ON p.payment_id = pi.payment_id 
+            WHERE pi.id = $eid AND p.type = 'expense' ) 
+            payment ON pd.payment_id = payment.payment_id
+            LEFT JOIN ".$this->tblba." ba ON pd.bank_account_id = ba.bank_account_id");
+
+        echo json_encode($query->getResultArray());
+
+    }
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Sales Module area
+        ----------------------------------------------------------
+        * @method viewExpense() use to get expense information based on id
+        * @param eID decrypted data of expense_id
+        * @return expense->as->single_result
+    */
+    public function viewSalesDetails($sID){
+
+        $sid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$sID));
+
+        $query = $this->db->query("select ts.* , wh.name as warehouse, tc.name as customer, tu.name as nameuser
+            from ".$this->tblsl." as ts, ".$this->tblwh." as wh, ".$this->tblc." as tc, ".$this->tblu." as tu
+            where ts.warehouse_id = wh.warehouse_id
+            and ts.customer_id = tc.customer_id
+            and ts.added_by = tu.user_id
+            and ts.sales_id = $sid
+        ");
+
+        echo json_encode($query->getRowArray());
+
+
+    }
+
+
+
+
+    /**
+        * @method getSalesItem() use to get the sales item information based on id
+        * @param sID decrypted data of sales_id
+        * @return item->as->multiple_result
+    */
+    public function viewSalesItems($sID){
+
+        $sid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$sID));
+
+        $query = $this->db->query("SELECT si.sales_item_id,si.quantity,i.parent_id,i.item_id,i.name,si.price
+        FROM tbl_sales_item si
+        INNER JOIN (SELECT parent.item_id AS parent_id, it.item_id,CONCAT(parent.name, ' - ', it.name) AS name,it.wholesale_price,it.retail_price
+            FROM tbl_item it INNER JOIN(SELECT item_id,name FROM tbl_item) parent ON it.parent = parent.item_id ORDER BY name ASC) i 
+            ON si.item_id = i.item_id
+        WHERE si.sales_id = $sid");
+
+         echo json_encode($query->getResultArray());    
+
+    }  
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
@@ -433,7 +610,7 @@ class Ajax_model extends  Model {
 
         $rid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$rID));
         
-        $query2 = $this->db->query("SELECT ri.reservation_item_id, ri.quantity, i.parent_id, i.item_id, i.name, ri.price
+        $query = $this->db->query("SELECT ri.reservation_item_id, ri.quantity, i.parent_id, i.item_id, i.name, ri.price, (ri.quantity * ri.price) as subtotal
             FROM tbl_reservation_item AS ri
             INNER JOIN (
                 SELECT parent.item_id AS parent_id, ti.item_id, CONCAT(parent.name, ' - ', ti.name) AS name, ti.wholesale_price, ti.retail_price
@@ -446,24 +623,18 @@ class Ajax_model extends  Model {
             ) AS i ON ri.item_id = i.item_id
             WHERE ri.reservation_id = $rid");
 
-            $count = 0;
-            $grand_total = 0;
-            $delivery_fee = 0;
-            $arr2 = [];
-            foreach($query2->getResultArray() as $ritm){
-                $data2 = [
-                    'quantity' => $ritm['quantity'],
-                    'name' => $ritm['name'],
-                    'price' => $ritm['price'],
-                    'sub_total' => $ritm['quantity'] * $ritm['price'],
-                ];
-
-                array_push($arr2, $data2);
-            }
-
-            echo json_encode($arr2);
+        echo json_encode($query->getResultArray());
 
     }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -518,6 +689,18 @@ class Ajax_model extends  Model {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
      /**
         ----------------------------------------------------------
         Purchase Module area
@@ -553,11 +736,13 @@ class Ajax_model extends  Model {
 
     }
 
+
     /**
         * @method getPurchaseItems() use to get the information of purchase items based on id
         * @param pID = decrypted data of purchase_id
         * @return purchase->as->multiple_result
     */
+
     public function getPurchaseItems($pID){
 
         $pid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'], $pID));
@@ -572,26 +757,12 @@ class Ajax_model extends  Model {
         ) AS i ON pi.item_id = i.item_id
         WHERE pi.purchase_id = $pid");
 
-        $arr = [];
-        foreach($query->getResultArray() as $row){
-
-            $data = [
-                'purchase_item_id' => $row['purchase_item_id'],
-                'quantity' => $row['quantity'],
-                'parent_id' => $row['parent_id'],
-                'item_id' => $row['item_id'],
-                'name' => $row['name'],
-                'price' => $row['price'],
-                'retail_price' => $row['retail_price'],
-                'wholesale_price' => $row['wholesale_price']
-            ];
-            array_push($arr, $data);
-
-        }
-
-        echo json_encode($arr);
+        echo json_encode($query->getResultArray());
 
     }
+
+
+
 
 
 
@@ -607,6 +778,7 @@ class Ajax_model extends  Model {
         * @var arr data container of the reservation information
         * @return json_encode
     */
+
     public function viewSTdetails($stID){
 
         $stid = 5;//$this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$stID));
@@ -639,7 +811,7 @@ class Ajax_model extends  Model {
 
     }
 
-
+    
     public function viewSTitems($stID){
 
         $stid = $this->encrypter->decrypt(str_ireplace(['~','$'],['/','+'],$stID));
@@ -654,21 +826,11 @@ class Ajax_model extends  Model {
         ) AS i ON sti.item_id = i.item_id
         WHERE sti.stock_transfer_id = $stid");
 
-        $arr =[];
-        foreach($query->getResultArray() as $row){
-
-            $data = [
-                'quantity' => $row['quantity'],
-                'name' => $row['name'],
-            ];
-
-            array_push($arr, $data);
-
-        }
-
-        echo json_encode($arr);
+        echo json_encode($query->getResultArray());
 
     }
+
+
 
 
 
@@ -729,9 +891,8 @@ class Ajax_model extends  Model {
                 'date' => date_format(date_create($row['date']),"M. d, Y"),
                 'total' => $row['total']
             ];
-
             array_push($arr, $data);
-
+            
         }
 
         echo json_encode($arr);

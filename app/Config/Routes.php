@@ -278,6 +278,12 @@ $routes->get('/items/viewvariations/(:any)', 'Ajax_controller::viewVariations/$1
 $routes->get('/quotation/getquotationitem/(:any)', 'Ajax_controller::getQuotationItem/$1' ,['filter' => 'auth']);
 $routes->get('/purchase/getpurchasedetails/(:any)', 'Ajax_controller::getPurchaseDetails/$1' ,['filter' => 'auth']);
 $routes->get('/purchase/getpurchaseitems/(:any)', 'Ajax_controller::getPurchaseItems/$1' ,['filter' => 'auth']);
+$routes->get('/expense/viewstdetails/(:any)', 'Ajax_controller::viewExpenseDetails/$1' ,['filter' => 'auth']);
+$routes->get('/expense/viewsummary/(:any)', 'Ajax_controller::viewExpenseSummary/$1' ,['filter' => 'auth']);
+$routes->get('/expense/paymenthistory/(:any)', 'Ajax_controller::viewpaymentHistory/$1' ,['filter' => 'auth']);
+$routes->get('/sales/viewdetails/(:any)', 'Ajax_controller::viewSalesDetails/$1' ,['filter' => 'auth']);
+$routes->get('/sales/viewitems/(:any)', 'Ajax_controller::viewSalesItems/$1' ,['filter' => 'auth']);
+
 
 /**
     API Routes

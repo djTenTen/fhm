@@ -12,17 +12,6 @@
 
     <?php
         // Message thrown from the controller
-
-        //transfered to addstocktransfer.php file
-        // if(!empty($_SESSION['stocktransfer_added'])){
-        //     echo '<div class="alert alert-success" role="alert">
-        //     <h4 class="alert-heading">Registration Success!</h4>
-        //     <p>Stock Transfer has been successfully registered</p>
-        // </div>';
-        //     unset($_SESSION['stocktransfer_added']);
-        // }
-
-
         if(!empty($_SESSION['stocktransfer_updated'])){
             echo '<div class="alert alert-success" role="alert">
             <h4 class="alert-heading">Update Success!</h4>
@@ -118,11 +107,7 @@
         </div>
         <div class="modal-body">
             
-            <div class="row1">
-
-      
-
-            </div>
+            <div class="row1"></div>
     
             <table class="table table-bordered mg-b-20">
                 <thead>
@@ -185,14 +170,14 @@
                 dataType: 'json',
                 success: function(data) {
 
-                    if(data[0].status == 'open'){
-                        span = `<span class="badge badge-primary">${ data[0].status }</span>`;
-                    }else if(data[0].status == 'ready'){
-                        span = `<span class="badge badge-warning">${ data[0].status }</span>`;
-                    }else if(data[0].status == 'completed'){
-                        span = `<span class="badge badge-success">${ data[0].status }</span>`;
-                    }else if(data[0].status == 'cancelled'){
-                        span = `<span class="badge badge-danger">${ data[0].status }</span>`;
+                    if(data.status == 'pending'){
+                        span = `<span class="badge badge-danger">${ data.status }</span>`;
+                    }else if(data.status == 'ready'){
+                        span = `<span class="badge badge-warning">${ data.status }</span>`;
+                    }else if(data.status == 'completed'){
+                        span = `<span class="badge badge-success">${ data.status }</span>`;
+                    }else if(data.status == 'cancelled'){
+                        span = `<span class="badge badge-danger">${ data.status }</span>`;
                     }
 
                     // Populate the modal body with the fetched data
@@ -202,24 +187,24 @@
                             <tbody>
                                 <tr>
                                     <td style="width: 20%;">ID</td>
-                                    <td style="width: 30%;">${ data[0].stock_transfer_id}</td>
+                                    <td style="width: 30%;">${ data.stock_transfer_id}</td>
 
                                     <td style="width: 20%;">Status</td>
                                     <td style="width: 30%;">${span}</span></td>
                                 </tr>
                                 <tr>
                                     <td>From</td>
-                                    <td colspan="3">${data[0].stfrom}</td>
+                                    <td colspan="3">${data.stfrom}</td>
                                 </tr>
                                 <tr>
                                     <td>To</td>
-                                    <td colspan="3">${data[0].stto}</td>
+                                    <td colspan="3">${data.stto}</td>
                                 </tr>
                                 <tr>
                                     <td>Added By</td>
-                                    <td>${data[0].nameuser}</td>
+                                    <td>${data.nameuser}</td>
                                     <td>Added On</td>
-                                    <td>${data[0].added_on}</td>
+                                    <td>${data.added_on}</td>
                                 </tr>
                             </tbody>
                         </table>

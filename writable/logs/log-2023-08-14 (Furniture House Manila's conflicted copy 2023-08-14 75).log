@@ -1,0 +1,9 @@
+INFO - 2023-08-14 17:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-14 17:43:26 --> Undefined variable $dsID
+in APPPATH\Models\Ajax_model.php on line 330.
+ 1 APPPATH\Models\Ajax_model.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dsID', 'C:\\Users\\Furniture House\\Dropbox\\01.Projects\\htdocs\\new\\admin.furniturehousemanila.com\\app\\Models\\Ajax_model.php', 330)
+ 2 APPPATH\Controllers\Ajax_controller.php(164): App\Models\Ajax_model->checkAuthentication()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ajax_controller->checkAuthentication()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ajax_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

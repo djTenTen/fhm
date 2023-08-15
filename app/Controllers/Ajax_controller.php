@@ -281,6 +281,91 @@ class Ajax_controller extends BaseController{
 
 
 
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Expense Module area
+        ----------------------------------------------------------
+    */
+    public function viewExpenseDetails($eID){
+
+        return $this->ajax_model->viewExpenseDetails($eID);
+
+    }
+
+
+    public function viewExpenseSummary($eID){
+
+        return $this->ajax_model->viewExpenseSummary($eID);
+        
+    }
+
+
+    public function viewpaymentHistory($eID){
+
+        return $this->ajax_model->viewpaymentHistory($eID);
+        
+    }
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+        ----------------------------------------------------------
+        Sales Module area
+        ----------------------------------------------------------
+    */
+    public function viewSalesDetails($sID){
+
+        return $this->ajax_model->viewSalesDetails($sID);
+
+    }
+
+    public function viewSalesItems($sID){
+
+        return $this->ajax_model->viewSalesItems($sID);
+
+    }
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
     
 
 

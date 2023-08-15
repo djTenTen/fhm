@@ -55,10 +55,12 @@ class Warehouse_model extends  Model {
     */
     public function getActiveWarehouse(){
 
-        $query = $this->db->query("select wh.*, tu.name as nameuser
-        from ".$this->tblwh." wh, ".$this->tblu." tu  
-        where wh.status = 'active'
-        and wh.added_by = tu.user_id");
+        $query = $this->db->table($this->tblwh.' wh')
+                ->select('wh.*, tu.name as nameuser')
+                ->join($this->tblu.' tu', 'wh.added_by = tu.user_id', 'inner')
+                ->where('wh.status', 'active')
+                ->get();
+
         return $query->getResultArray();
 
     }
@@ -70,10 +72,12 @@ class Warehouse_model extends  Model {
     */
     public function getInactiveWarehouse(){
 
-        $query = $this->db->query("select wh.*, tu.name as nameuser
-        from ".$this->tblwh." wh, ".$this->tblu." tu  
-        where wh.status = 'inactive'
-        and wh.added_by = tu.user_id");
+        $query = $this->db->table($this->tblwh.' wh')
+                ->select('wh.*, tu.name as nameuser')
+                ->join($this->tblu.' tu', 'wh.added_by = tu.user_id', 'inner')
+                ->where('wh.status', 'inactive')
+                ->get();
+
         return $query->getResultArray();
 
     }
@@ -96,8 +100,7 @@ class Warehouse_model extends  Model {
             'added_on' => $this->date.' '.$this->time
         );
 
-        $builder = $this->db->table($this->tblwh);
-        $builder->insert($data);
+        $this->db->table($this->tblwh)->insert($data);
 
     }
 
@@ -123,9 +126,7 @@ class Warehouse_model extends  Model {
             'updated_on' => $this->date.' '.$this->time
         );
 
-        $builder = $this->db->table($this->tblwh);
-        $builder->where("warehouse_id",$wid);
-        $builder->update($data);
+        $this->db->table($this->tblwh)->where("warehouse_id",$wid)->update($data);
 
     }
 
